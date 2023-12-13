@@ -1,13 +1,27 @@
 {
     "private": true,
-    "type": "module",
+    
     "scripts": {
-        "dev": "vite",
-        "build": "vite build"
+        "dev": "npm run development",
+        "build": "npm run production",
+        "development": "mix"
     },
     "devDependencies": {
-        "axios": "^1.6.1",
-        "laravel-vite-plugin": "^0.8.0",
+        "@babel/core": "^7.23.6",
+        "@babel/preset-env": "^7.23.6",
+        "@babel/preset-react": "^7.23.3",
+        "axios": "^1.1.2",
+        "babel-loader": "^9.1.3",
+        "laravel-mix": "^6.0.49",
+        "postcss": "^8.1.14",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "sass": "^1.15.2",
+        "sass-loader": "^8.0.0",
         "vite": "^4.0.0"
+    },
+    "dependencies": {
+        "feather-icons": "^4.28.0",
+        "react-chatbot-kit": "^2.2.1"
     }
 }

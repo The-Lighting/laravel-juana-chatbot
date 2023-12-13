@@ -1,0 +1,80 @@
+.contact-form {
+    /* General styles for the form container */
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-form h3 {
+    /* Styles for the form heading */
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .contact-form form {
+    /* Styles for the form itself */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .contact-form label {
+    /* Styles for form labels */
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    display: inline-block;
+    width: 150px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    /* Styles for input fields and textarea */
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    /* Styles for focused input fields and textarea */
+    outline: none;
+    border: 1px solid #3385ff;
+  }
+  
+  .contact-form select {
+    /* Styles for select element */
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+  
+  .contact-form button {
+    /* Styles for submit button */
+    background-color: #3385ff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  .contact-form button:hover {
+    /* Styles for submit button hover state */
+    background-color: #2979e4;
+  }
+  
+  /* Additional styles for specific elements */
+  .contact-form .hidden {
+    display: none;
+  }
+  

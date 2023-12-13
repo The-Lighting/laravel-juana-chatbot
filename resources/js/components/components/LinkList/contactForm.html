@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Contact Form</title>
+  <style>
+    @import url("styles.css");
+    </style>
+    
+</head>
+
+<body>
+  <form action="https://formsubmit.co/v-shivam@juanatech.com/custom-form" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <select name="contact_method" required>
+  <option value="email">Email</option>
+  <option value="phone">Phone</option>
+</select>
+    <textarea name="notes" placeholder="Additional Notes"></textarea>
+    <input type="datetime-local" name="contact_time" placeholder="Contact Time" required>
+    <button type="submit">Send</button>
+  </form>
+</body>
+
+</html>
