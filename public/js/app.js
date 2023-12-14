@@ -2702,7 +2702,7 @@ var config = {
       }, {
         text: 'Request a callback',
         ///// just add this if you want to add a request a callback forms page in there along with the other 
-        url: 'https://shivambhardwaj93.github.io/sample_form/',
+        url: '../contact',
         /// currently this only work with the linklist component only
         id: 2
       }]

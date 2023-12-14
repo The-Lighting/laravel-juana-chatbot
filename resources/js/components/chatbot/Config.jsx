@@ -103,7 +103,7 @@ const config = {
           id: 1,
         },{
           text: 'Request a callback',///// just add this if you want to add a request a callback forms page in there along with the other 
-          url:'https://shivambhardwaj93.github.io/sample_form/',/// currently this only work with the linklist component only
+          url:'../contact',/// currently this only work with the linklist component only
           id: 2
         }
       
