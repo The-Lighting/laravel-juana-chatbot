@@ -14,8 +14,12 @@ MessageParser
 
     if (helloAndRestart.some((word) => lowerCaseMessage.includes(word))) {
       this.actionProvider.greet();
+    }else{
+      this.actionProvider.handleGPTResponse(message);
     }
   }
+  
+
 }
 
 export default MessageParser;

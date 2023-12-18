@@ -113,6 +113,35 @@ class ActionProvider {
         this.updateChatbotState(message)
     }
 
+
+
+    handleGPTResponse = (userInput) => {
+        try {
+            // Replace this with the actual URL of your Express server
+            const expressServerUrl = 'http://localhost:3000/chat';
+
+            // Make a POST request to the Express server using Axios
+            axios.post(expressServerUrl, {
+                userInput: userInput,
+            })
+            .then(response => {
+                // Get the bot response from the response data
+                const botResponse = response.data.botResponse;
+
+                // Create a chatbot message with the bot response
+                const message = this.createChatBotMessage(botResponse);
+
+                // Update the chatbot state with the message
+                this.updateChatbotState(message);
+            })
+            .catch(error => {
+                console.error('Error sending request to Express server:', error);
+            });
+        } catch (error) {
+            console.error('Error sending request to Express server:', error);
+        }
+    }
+
     //implement till here
 }
 

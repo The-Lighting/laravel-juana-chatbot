@@ -2525,6 +2525,30 @@ var ActionProvider = /*#__PURE__*/function () {
       });
       _this.updateChatbotState(message);
     });
+    _defineProperty(this, "handleGPTResponse", function (userInput) {
+      try {
+        // Replace this with the actual URL of your Express server
+        var expressServerUrl = 'http://localhost:3000/chat';
+
+        // Make a POST request to the Express server using Axios
+        axios.post(expressServerUrl, {
+          userInput: userInput
+        }).then(function (response) {
+          // Get the bot response from the response data
+          var botResponse = response.data.botResponse;
+
+          // Create a chatbot message with the bot response
+          var message = _this.createChatBotMessage(botResponse);
+
+          // Update the chatbot state with the message
+          _this.updateChatbotState(message);
+        })["catch"](function (error) {
+          console.error('Error sending request to Express server:', error);
+        });
+      } catch (error) {
+        console.error('Error sending request to Express server:', error);
+      }
+    });
     this.createChatBotMessage = createChatBotMessage;
     this.setState = setStateFunc;
     this.createClientMessage = createClientMessage;
@@ -2753,6 +2777,8 @@ var MessageParser = /*#__PURE__*/function () {
         return lowerCaseMessage.includes(word);
       })) {
         this.actionProvider.greet();
+      } else {
+        this.actionProvider.handleGPTResponse(message);
       }
     }
   }]);
