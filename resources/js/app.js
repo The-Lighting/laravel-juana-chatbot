@@ -5,4 +5,4 @@ require('./bootstrap');
 require('./components/HelloReact');
 
 require('./components/Counter')
-require('./components/Chatbot')
+require('./components/Chatbot.jsx')

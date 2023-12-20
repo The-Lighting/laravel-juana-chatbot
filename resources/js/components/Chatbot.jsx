@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import { Chatbot } from 'react-chatbot-kit';
 import 'react-chatbot-kit/build/main.css';
@@ -7,11 +7,14 @@ import ActionProvider from './chatbot/ActionProvider';
 import MessageParser from './chatbot/MessageParser';
 import config from './chatbot/Config';
 
+import 'Chatbot.css';
+
 function App() {
+  const [showChatbot, toggleChatbot] = useState(true);
   return (
     <div className='App'>
 
-{/* <div className="App-header">
+<div className="App-header">
           <ConditionallyRender
             ifTrue={showChatbot}
             show={
@@ -27,16 +30,25 @@ function App() {
         <button
           className="app-chatbot-button"
           onClick={() => toggleChatbot((prev) => !prev)}
-        >
-          <ButtonIcon className="app-chatbot-button-icon" />
-        </button> */}
-    
-      
-        <Chatbot
-          config={config}
-          actionProvider={ActionProvider}
-          messageParser={MessageParser}
-        />
+        >this is the button to render the chatbot
+          {/* <ButtonIcon className="app-chatbot-button-icon" /> */}
+        </button>
+      {/* <div className="app-chatbot-container">
+        {showChatbot && (
+          <Chatbot
+            config={config}
+            messageParser={MessageParser}
+            actionProvider={ActionProvider}
+          />
+        )}
+      </div>
+
+      <button
+        className="app-chatbot-button"
+        onClick={() => toggleChatbot(prev => !prev)}
+      >
+        Toggle Chatbot
+      </button> */}
     </div>
   );
 }

@@ -20,6 +20,9 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "@emotion/react": "^11.11.1",
+        "@emotion/styled": "^11.11.0",
+        "@mui/material": "^5.15.0",
         "feather-icons": "^4.28.0",
         "react-chatbot-kit": "^2.2.1"
     }
