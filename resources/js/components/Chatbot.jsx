@@ -7,7 +7,7 @@ import ActionProvider from './chatbot/ActionProvider';
 import MessageParser from './chatbot/MessageParser';
 import config from './chatbot/Config';
 
-import 'Chatbot.css';
+// import 'Chatbot.css';
 
 function App() {
   const [showChatbot, toggleChatbot] = useState(true);
@@ -15,24 +15,20 @@ function App() {
     <div className='App'>
 
 <div className="App-header">
-          <ConditionallyRender
-            ifTrue={showChatbot}
-            show={
+          
+            
               <Chatbot
                 config={config}
                 messageParser={MessageParser}
                 actionProvider={ActionProvider}
               />
-            }
-          />
+            
+          
         </div>
 
-        <button
-          className="app-chatbot-button"
-          onClick={() => toggleChatbot((prev) => !prev)}
-        >this is the button to render the chatbot
+        
           {/* <ButtonIcon className="app-chatbot-button-icon" /> */}
-        </button>
+        
       {/* <div className="app-chatbot-container">
         {showChatbot && (
           <Chatbot

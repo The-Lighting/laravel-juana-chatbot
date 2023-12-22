@@ -2234,7 +2234,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 __webpack_require__(/*! ./components/HelloReact */ "./resources/js/components/HelloReact.js");
 __webpack_require__(/*! ./components/Counter */ "./resources/js/components/Counter.js");
-__webpack_require__(/*! ./components/Chatbot */ "./resources/js/components/Chatbot.js");
+__webpack_require__(/*! ./components/Chatbot.jsx */ "./resources/js/components/Chatbot.jsx");
 
 /***/ }),
 
@@ -2276,47 +2276,6 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     forceTLS: (import.meta.env.VITE_PUSHER_SCHEME ?? 'https') === 'https',
 //     enabledTransports: ['ws', 'wss'],
 // });
-
-/***/ }),
-
-/***/ "./resources/js/components/Chatbot.js":
-/*!********************************************!*\
-  !*** ./resources/js/components/Chatbot.js ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_chatbot_kit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-chatbot-kit */ "./node_modules/react-chatbot-kit/build/index.js");
-/* harmony import */ var react_chatbot_kit__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_chatbot_kit__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_chatbot_kit_build_main_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-chatbot-kit/build/main.css */ "./node_modules/react-chatbot-kit/build/main.css");
-/* harmony import */ var _chatbot_ActionProvider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./chatbot/ActionProvider */ "./resources/js/components/chatbot/ActionProvider.jsx");
-/* harmony import */ var _chatbot_MessageParser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./chatbot/MessageParser */ "./resources/js/components/chatbot/MessageParser.jsx");
-/* harmony import */ var _chatbot_Config__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./chatbot/Config */ "./resources/js/components/chatbot/Config.jsx");
-
-
-
-
-
-
-
-function App() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "App"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_chatbot_kit__WEBPACK_IMPORTED_MODULE_2__.Chatbot, {
-    config: _chatbot_Config__WEBPACK_IMPORTED_MODULE_6__["default"],
-    actionProvider: _chatbot_ActionProvider__WEBPACK_IMPORTED_MODULE_4__["default"],
-    messageParser: _chatbot_MessageParser__WEBPACK_IMPORTED_MODULE_5__["default"]
-  }));
-}
-
-// Render the App component into the specified div
-var chatbotContainer = document.getElementById('chatbot-App');
-if (chatbotContainer) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(App, null), chatbotContainer);
-}
 
 /***/ }),
 
@@ -2440,6 +2399,65 @@ if (document.getElementById('hello-react')) {
   ReactDOM.render( /*#__PURE__*/React.createElement(HelloReact, null), document.getElementById('hello-react'));
 }
 module.exports = HelloReact;
+
+/***/ }),
+
+/***/ "./resources/js/components/Chatbot.jsx":
+/*!*********************************************!*\
+  !*** ./resources/js/components/Chatbot.jsx ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_chatbot_kit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-chatbot-kit */ "./node_modules/react-chatbot-kit/build/index.js");
+/* harmony import */ var react_chatbot_kit__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_chatbot_kit__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_chatbot_kit_build_main_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-chatbot-kit/build/main.css */ "./node_modules/react-chatbot-kit/build/main.css");
+/* harmony import */ var _chatbot_ActionProvider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./chatbot/ActionProvider */ "./resources/js/components/chatbot/ActionProvider.jsx");
+/* harmony import */ var _chatbot_MessageParser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./chatbot/MessageParser */ "./resources/js/components/chatbot/MessageParser.jsx");
+/* harmony import */ var _chatbot_Config__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./chatbot/Config */ "./resources/js/components/chatbot/Config.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+// import 'Chatbot.css';
+
+function App() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true),
+    _useState2 = _slicedToArray(_useState, 2),
+    showChatbot = _useState2[0],
+    toggleChatbot = _useState2[1];
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+    className: "App",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+      className: "App-header",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_chatbot_kit__WEBPACK_IMPORTED_MODULE_2__.Chatbot, {
+        config: _chatbot_Config__WEBPACK_IMPORTED_MODULE_6__["default"],
+        messageParser: _chatbot_MessageParser__WEBPACK_IMPORTED_MODULE_5__["default"],
+        actionProvider: _chatbot_ActionProvider__WEBPACK_IMPORTED_MODULE_4__["default"]
+      })
+    })
+  });
+}
+
+// Render the App component into the specified div
+var chatbotContainer = document.getElementById('chatbot-App');
+if (chatbotContainer) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(App, {}), chatbotContainer);
+}
 
 /***/ }),
 
