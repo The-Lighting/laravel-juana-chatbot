@@ -53,7 +53,7 @@ class ActionProvider {
     };
     handleStore = () => {
         const message = this.createChatBotMessage(
-            "if you have any issues the products page please contact the team."
+            "if you have any issues with the products page please contact the team."
         )
         this.updateChatbotState(message);
     }
@@ -81,11 +81,6 @@ class ActionProvider {
         });
         
     }
-
-
-
-
-
     //implementing other courses
     handlegamebasedlearning = () => {
         const message = this.createChatBotMessage(
@@ -140,6 +135,13 @@ class ActionProvider {
         } catch (error) {
             console.error('Error sending request to Express server:', error);
         }
+    }
+    handleJuanaNexo = () => {
+        const message = this.createChatBotMessage("Our Parent Company is JuanaTech, here is the like to our Introduction on their domain",
+        {
+            widget: 'headtoJuanaNexo'
+        });
+        this.updateChatbotState(message);
     }
 
     //implement till here

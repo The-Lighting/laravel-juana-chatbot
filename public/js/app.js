@@ -2234,6 +2234,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 __webpack_require__(/*! ./components/HelloReact */ "./resources/js/components/HelloReact.js");
 __webpack_require__(/*! ./components/Counter */ "./resources/js/components/Counter.js");
+
+//this line is the only line that needs to be here
 __webpack_require__(/*! ./components/Chatbot.jsx */ "./resources/js/components/Chatbot.jsx");
 
 /***/ }),
@@ -2500,7 +2502,7 @@ var ActionProvider = /*#__PURE__*/function () {
       _this.updateChatbotState(message);
     });
     _defineProperty(this, "handleStore", function () {
-      var message = _this.createChatBotMessage("if you have any issues the products page please contact the team.");
+      var message = _this.createChatBotMessage("if you have any issues with the products page please contact the team.");
       _this.updateChatbotState(message);
     });
     _defineProperty(this, "handleInstructor", function () {
@@ -2566,6 +2568,12 @@ var ActionProvider = /*#__PURE__*/function () {
       } catch (error) {
         console.error('Error sending request to Express server:', error);
       }
+    });
+    _defineProperty(this, "handleJuanaNexo", function () {
+      var message = _this.createChatBotMessage("Our Parent Company is JuanaTech, here is the like to our Introduction on their domain", {
+        widget: 'headtoJuanaNexo'
+      });
+      _this.updateChatbotState(message);
     });
     this.createChatBotMessage = createChatBotMessage;
     this.setState = setStateFunc;
@@ -2749,6 +2757,18 @@ var config = {
         id: 2
       }]
     }
+  }, {
+    widgetName: 'headtoJuanaNexo',
+    widgetFunc: function widgetFunc(props) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_LinkList_LinkList__WEBPACK_IMPORTED_MODULE_3__["default"], _objectSpread({}, props));
+    },
+    props: {
+      options: [{
+        text: "head to Nexo's Introduction",
+        url: "https://juanatech.com/nexo/",
+        id: 1
+      }]
+    }
   }],
   //here we have defined the various steps in this extra
   customStyles: {
@@ -2885,6 +2905,10 @@ var BaseOptions = function BaseOptions(props) {
     text: "contact us",
     handler: props.actionProvider.handlecontactus,
     id: 6
+  }, {
+    text: "Where did all this start ?",
+    handler: props.actionProvider.handleJuanaNexo,
+    id: 7
   }];
   var optionsMarkup = options.map(function (option) {
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
