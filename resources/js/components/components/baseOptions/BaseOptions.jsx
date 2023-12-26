@@ -8,7 +8,8 @@ const BaseOptions = (props) => {
     { text: "Visit Store", handler: props.actionProvider.handleStore, id: 3 },
     { text: "Know our Instructors", handler: props.actionProvider.handleInstructor, id: 4 },
     { text: "I don't see anything here", handler: props.actionProvider.handleForum, id: 5 },
-    { text: "contact us", handler: props.actionProvider.handlecontactus, id:6}
+    { text: "contact us", handler: props.actionProvider.handlecontactus, id:6 },
+    { text: "Where did all this start ?",handler: props.actionProvider.handleJuanaNexo, id:7 }
   ];
 
   const optionsMarkup = options.map((option) => (

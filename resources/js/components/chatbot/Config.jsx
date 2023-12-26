@@ -104,10 +104,19 @@ const config = {
         },{
           text: 'Request a callback',///// just add this if you want to add a request a callback forms page in there along with the other 
           url:'../contact',/// currently this only work with the linklist component only
-          id: 2
-        }
-      
-      ]
+          id: 2,
+        }]
+      }
+    },
+    {
+      widgetName: 'headtoJuanaNexo',
+      widgetFunc:(props) =>< LinkList {...props}/>,
+      props:{
+        options:[{
+          text: "head to Nexo's Introduction",
+          url: "https://juanatech.com/nexo/",
+          id: 1,
+        }]
       }
     }
 
