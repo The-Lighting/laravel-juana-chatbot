@@ -24,6 +24,6 @@
         "@emotion/styled": "^11.11.0",
         "@mui/material": "^5.15.0",
         "feather-icons": "^4.28.0",
-        "react-chatbot-kit": "^2.2.1"
+        "@locomotiveb93/react-chatbot-kit": "0.0.1"
     }
 }

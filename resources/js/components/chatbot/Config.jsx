@@ -1,5 +1,5 @@
 import React from "react";
-import { createChatBotMessage } from 'react-chatbot-kit';
+import { createChatBotMessage } from '@locomotiveb93/react-chatbot-kit';
 import BaseOptions from "../components/baseOptions/BaseOptions";
 import LinkList from "../components/LinkList/LinkList";
 import MoreCourseOptions from "../components/kindsofcoursesoptions/TypesOfCourses";

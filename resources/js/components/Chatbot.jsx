@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import { Chatbot } from 'react-chatbot-kit';
-import 'react-chatbot-kit/build/main.css';
+import { Chatbot } from '@locomotiveb93/react-chatbot-kit';
+import '@locomotiveb93/react-chatbot-kit/build/main.css';
 
 import ActionProvider from './chatbot/ActionProvider';
 import MessageParser from './chatbot/MessageParser';
@@ -13,38 +13,15 @@ function App() {
   const [showChatbot, toggleChatbot] = useState(true);
   return (
     <div className='App'>
-
-<div className="App-header">
-          
-            
-              <Chatbot
-                config={config}
-                messageParser={MessageParser}
-                actionProvider={ActionProvider}
-              />
-            
-          
-        </div>
-
-        
-          {/* <ButtonIcon className="app-chatbot-button-icon" /> */}
-        
-      {/* <div className="app-chatbot-container">
-        {showChatbot && (
-          <Chatbot
-            config={config}
-            messageParser={MessageParser}
-            actionProvider={ActionProvider}
-          />
-        )}
+      <div className="App-header">
+        <Chatbot
+          config={config}
+          messageParser={MessageParser}
+          actionProvider={ActionProvider}
+          disableScrollToBottom= {true}
+        />
       </div>
 
-      <button
-        className="app-chatbot-button"
-        onClick={() => toggleChatbot(prev => !prev)}
-      >
-        Toggle Chatbot
-      </button> */}
     </div>
   );
 }

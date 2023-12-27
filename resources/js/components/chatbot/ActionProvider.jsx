@@ -137,7 +137,7 @@ class ActionProvider {
         }
     }
     handleJuanaNexo = () => {
-        const message = this.createChatBotMessage("Our Parent Company is JuanaTech, here is the like to our Introduction on their domain",
+        const message = this.createChatBotMessage("Our Parent Company is JuanaTech, here is the link to our Introduction on their domain",
         {
             widget: 'headtoJuanaNexo'
         });

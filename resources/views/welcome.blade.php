@@ -22,7 +22,7 @@
         position: fixed;
         bottom: 20px;
         right: 20px;
-        padding: 10px 20px;
+        padding: 11px 28px;
         font-size: 16px;
         background-color: #eb5959e9;
         color: white;
@@ -39,7 +39,7 @@
     #chatbot-App {
         display: none;
         position: fixed;
-        bottom: 70px;
+        bottom: 90px;
         right: 20px;
         padding: 1px;
         background-color: #eed5d5;
@@ -53,7 +53,10 @@
     <div id="hello-react"></div>
     {{-- This is welcome.blade.php --}}
     <div id="chatbot-App"></div>
-    <button class="chatbot-button" onclick="toggleChatbot()">Ask Inkie?</button>
+
+    <button class="chatbot-button" onclick="toggleChatbot()">
+    <img src="{{ asset('robot.svg') }}" style="width: 30px; height: 30px;">
+    </button>
 
     <script>
         function toggleChatbot() {
@@ -61,5 +64,5 @@
             chatbotDiv.style.display = (chatbotDiv.style.display === 'block') ? 'none' : 'block';
         }
     </script>
-</body>
+</body> 
 </html>
