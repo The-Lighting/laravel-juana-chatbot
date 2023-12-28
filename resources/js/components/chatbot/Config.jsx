@@ -9,8 +9,8 @@ import ExperientialLearning from "../components/kindsofcoursesoptions/Experentia
 import PersonalDevelopment from "../components/kindsofcoursesoptions/PersonalDevelopment";
 // import ActionProvider from '../../../recheck/chat/src/chatbot/ActionProvider';
 const config = {
-  botName: "Inkie",
-  initialMessages: [createChatBotMessage("Hi, I am Inkie! "), createChatBotMessage("Hope you are doing well. What would you like to Ask?",
+  botName: "Nex",
+  initialMessages: [ /*createChatBotMessage("Hi, I am Nex! "),*/ createChatBotMessage("Hope you are doing well. What would you like to Ask?",
   {
     //options object is given here
     widget: 'BaseOptions',
@@ -94,11 +94,51 @@ const config = {
       }
     },
     {
+      widgetName: 'HeadToStore',
+      widgetFunc: (props) => <LinkList {...props} />,
+      props:{
+        options:[{
+          text: "head to the Store",
+          url: "https://justnexo.com/products",
+          id: 1,
+        }]
+      }
+    },{
+      widgetName: 'HeadToInstructors',
+      widgetFunc: (props) => < LinkList {...props} />,
+      props:{
+        options:[{
+          text: "more on Instructors",
+          url: "https://justnexo.com/instructors",
+          id: 1
+        },{
+          text: "Find an Instructor",
+          url: "https://justnexo.com/instructor-finder",
+          id: 2
+        },{
+          text: "become an Instructor",
+          url: "https://justnexo.com/become-instructor",
+          id: 3
+        }
+      ]
+      }
+    },{
+      widgetName: "headToCertificate",
+      widgetFunc: (props) => < LinkList {...props} />,
+      props: {
+        options:[{
+          text: "Certificate Verification",
+          url: "https://justnexo.com/certificate_validation",
+          id:1
+        }]
+      }
+    },
+    {
       widgetName: 'contactus',
       widgetFunc:(props) =>< LinkList {...props}/>,
       props:{
         options:[{
-          text:"head to the Forums",
+          text:"Engage with real conversations in the Forums",
           url: "https://justnexo.com/forums",
           id: 1,
         },{

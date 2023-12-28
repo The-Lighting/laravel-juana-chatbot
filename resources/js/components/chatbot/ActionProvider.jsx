@@ -53,12 +53,17 @@ class ActionProvider {
     };
     handleStore = () => {
         const message = this.createChatBotMessage(
-            "if you have any issues with the products page please contact the team."
+            "if you have any issues with the products page please contact the team.",
+            {
+                widget: "HeadToStore"
+            }
         )
         this.updateChatbotState(message);
     }
     handleInstructor = () => {
-        const message = this.createChatBotMessage("please login for more information")
+        const message = this.createChatBotMessage("We take good care of selecting good Instructors for our affiliated students. Please find more information on the official website",{
+            widget: "HeadToInstructors"
+        })
         
         //handle session details
         this.updateChatbotState(message);
@@ -140,6 +145,12 @@ class ActionProvider {
         const message = this.createChatBotMessage("Our Parent Company is JuanaTech, here is the link to our Introduction on their domain",
         {
             widget: 'headtoJuanaNexo'
+        });
+        this.updateChatbotState(message);
+    }
+    handleCertificate = () =>{
+        const message = this.createChatBotMessage("Here is the link to the webpage to handle Certicate Verification",{
+            widget: 'headToCertificate'
         });
         this.updateChatbotState(message);
     }

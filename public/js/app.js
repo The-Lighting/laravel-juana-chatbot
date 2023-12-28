@@ -7,7 +7,105 @@
   \**********************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-(()=>{"use strict";var e={n:t=>{var r=t&&t.__esModule?()=>t.default:()=>t;return e.d(r,{a:r}),r},d:(t,r)=>{for(var a in r)e.o(r,a)&&!e.o(t,a)&&Object.defineProperty(t,a,{enumerable:!0,get:r[a]})},o:(e,t)=>Object.prototype.hasOwnProperty.call(e,t),r:e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})}},t={};e.r(t),e.d(t,{Chatbot:()=>B,createChatBotMessage:()=>i,createClientMessage:()=>u,createCustomMessage:()=>l,default:()=>H,useChatbot:()=>T});const r=__webpack_require__(/*! react */ "./node_modules/react/index.js");var a=e.n(r);const n=__webpack_require__(/*! react-conditionally-render */ "./node_modules/react-conditionally-render/dist/index.js");var o=e.n(n),s=function(){return s=Object.assign||function(e){for(var t,r=1,a=arguments.length;r<a;r++)for(var n in t=arguments[r])Object.prototype.hasOwnProperty.call(t,n)&&(e[n]=t[n]);return e},s.apply(this,arguments)},c=function(e,t){return{message:e,type:t,id:Math.round(Date.now()*Math.random())}},i=function(e,t){return s(s(s({},c(e,"bot")),t),{loading:!0})},l=function(e,t,r){return s(s({},c(e,t)),r)},u=function(e,t){return s(s({},c(e,"user")),t)},m=function(e){for(var t=[],r=1;r<arguments.length;r++)t[r-1]=arguments[r];if(e)return e.apply(void 0,t)};function g(){return g=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var a in r)Object.prototype.hasOwnProperty.call(r,a)&&(e[a]=r[a])}return e},g.apply(this,arguments)}const d=({styles:e={},...t})=>a().createElement("svg",g({xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 512 512"},t),a().createElement("path",{d:"M256 288c79.5 0 144-64.5 144-144S335.5 0 256 0 112 64.5 112 144s64.5 144 144 144zm128 32h-55.1c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16H128C57.3 320 0 377.3 0 448v16c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48v-16c0-70.7-57.3-128-128-128z"})),f=function(e){var t=e.message,r=e.customComponents;return a().createElement("div",{className:"react-chatbot-kit-user-chat-message-container"},a().createElement(o(),{condition:!!r.userChatMessage,show:m(r.userChatMessage,{message:t}),elseShow:a().createElement("div",{className:"react-chatbot-kit-user-chat-message"},t,a().createElement("div",{className:"react-chatbot-kit-user-chat-message-arrow"}))}),a().createElement(o(),{condition:!!r.userAvatar,show:m(r.userAvatar),elseShow:a().createElement("div",{className:"react-chatbot-kit-user-avatar"},a().createElement("div",{className:"react-chatbot-kit-user-avatar-container"},a().createElement(d,{className:"react-chatbot-kit-user-avatar-icon"})))}))},h=function(){return a().createElement("div",{className:"react-chatbot-kit-chat-bot-avatar"},a().createElement("div",{className:"react-chatbot-kit-chat-bot-avatar-container"},a().createElement("p",{className:"react-chatbot-kit-chat-bot-avatar-letter"},"B")))},p=function(){return a().createElement("div",{className:"chatbot-loader-container"},a().createElement("svg",{id:"dots",width:"50px",height:"21px",viewBox:"0 0 132 58",version:"1.1",xmlns:"http://www.w3.org/2000/svg"},a().createElement("g",{stroke:"none",fill:"none"},a().createElement("g",{id:"chatbot-loader",fill:"#fff"},a().createElement("circle",{id:"chatbot-loader-dot1",cx:"25",cy:"30",r:"13"}),a().createElement("circle",{id:"chatbot-loader-dot2",cx:"65",cy:"30",r:"13"}),a().createElement("circle",{id:"chatbot-loader-dot3",cx:"105",cy:"30",r:"13"})))))};var v=function(){return v=Object.assign||function(e){for(var t,r=1,a=arguments.length;r<a;r++)for(var n in t=arguments[r])Object.prototype.hasOwnProperty.call(t,n)&&(e[n]=t[n]);return e},v.apply(this,arguments)};const y=function(e){var t=e.message,n=e.withAvatar,s=void 0===n||n,c=e.loading,i=e.messages,l=e.customComponents,u=e.setState,g=e.customStyles,d=e.delay,f=e.id,y=(0,r.useState)(!1),b=y[0],w=y[1];(0,r.useEffect)((function(){var e;return function(t,r){var a=750;d&&(a+=d),e=setTimeout((function(){var e=function(e,t,r){if(r||2===arguments.length)for(var a,n=0,o=t.length;n<o;n++)!a&&n in t||(a||(a=Array.prototype.slice.call(t,0,n)),a[n]=t[n]);return e.concat(a||Array.prototype.slice.call(t))}([],t,!0).find((function(e){return e.id===f}));e&&(e.loading=!1,e.delay=void 0,r((function(t){var r=t.messages,a=r.findIndex((function(e){return e.id===f}));return r[a]=e,v(v({},t),{messages:r})})))}),a)}(i,u),function(){clearTimeout(e)}}),[d,f]),(0,r.useEffect)((function(){d?setTimeout((function(){return w(!0)}),d):w(!0)}),[d]);var E={backgroundColor:""},P={borderRightColor:""};return g&&(E.backgroundColor=g.backgroundColor,P.borderRightColor=g.backgroundColor),a().createElement(o(),{condition:b,show:a().createElement("div",{className:"react-chatbot-kit-chat-bot-message-container"},a().createElement(o(),{condition:s,show:a().createElement(o(),{condition:!!(null==l?void 0:l.botAvatar),show:m(null==l?void 0:l.botAvatar),elseShow:a().createElement(h,null)})}),a().createElement(o(),{condition:!!(null==l?void 0:l.botChatMessage),show:m(null==l?void 0:l.botChatMessage,{message:t,loader:a().createElement(p,null)}),elseShow:a().createElement("div",{className:"react-chatbot-kit-chat-bot-message",style:E},a().createElement(o(),{condition:c,show:a().createElement(p,null),elseShow:a().createElement("span",null,t)}),a().createElement(o(),{condition:s,show:a().createElement("div",{className:"react-chatbot-kit-chat-bot-message-arrow",style:P})}))}))})};function b(){return b=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var a in r)Object.prototype.hasOwnProperty.call(r,a)&&(e[a]=r[a])}return e},b.apply(this,arguments)}const w=({styles:e={},...t})=>a().createElement("svg",b({xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 512 512"},t),a().createElement("path",{d:"M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"}));var E=function(){return E=Object.assign||function(e){for(var t,r=1,a=arguments.length;r<a;r++)for(var n in t=arguments[r])Object.prototype.hasOwnProperty.call(t,n)&&(e[n]=t[n]);return e},E.apply(this,arguments)},P=function(e,t,r){if(r||2===arguments.length)for(var a,n=0,o=t.length;n<o;n++)!a&&n in t||(a||(a=Array.prototype.slice.call(t,0,n)),a[n]=t[n]);return e.concat(a||Array.prototype.slice.call(t))};const S=function(e){var t=e.state,n=e.setState,s=e.widgetRegistry,i=e.messageParser,l=e.parse,u=e.customComponents,m=e.actionProvider,g=e.botName,d=e.customStyles,h=e.headerText,p=e.customMessages,v=e.placeholderText,b=e.validator,S=e.disableScrollToBottom,O=e.messageHistory,k=e.actions,M=e.messageContainerRef,C=t.messages,N=(0,r.useState)(""),x=N[0],j=N[1],T=function(){setTimeout((function(){var e;M.current&&(M.current.scrollTop=null===(e=null==M?void 0:M.current)||void 0===e?void 0:e.scrollHeight)}),50)};(0,r.useEffect)((function(){S||T()}));var A=function(){n((function(e){return E(E({},e),{messages:P(P([],e.messages,!0),[c(x,"user")],!1)})})),T(),j("")},B={backgroundColor:""};d&&d.chatButton&&(B.backgroundColor=d.chatButton.backgroundColor);var H="Conversation with "+g;h&&(H=h);var I="Write your message here";return v&&(I=v),a().createElement("div",{className:"react-chatbot-kit-chat-container"},a().createElement("div",{className:"react-chatbot-kit-chat-inner-container"},a().createElement(o(),{condition:!!u.header,show:u.header&&u.header(m),elseShow:a().createElement("div",{className:"react-chatbot-kit-chat-header"},H)}),a().createElement("div",{className:"react-chatbot-kit-chat-message-container",ref:M},a().createElement(o(),{condition:"string"==typeof O&&Boolean(O),show:a().createElement("div",{dangerouslySetInnerHTML:{__html:O}})}),C.map((function(e,r){return"bot"===e.type?a().createElement(a().Fragment,{key:e.id},function(e,r){var c;c=e.withAvatar?e.withAvatar:function(e,t){if(0===t)return!0;var r=e[t-1];return!("bot"===r.type&&!r.widget)}(C,r);var i=E(E({},e),{setState:n,state:t,customComponents:u,widgetRegistry:s,messages:C,actions:k});if(e.widget){var l=s.getWidget(i.widget,E(E({},t),{scrollIntoView:T,payload:e.payload,actions:k}));return a().createElement(a().Fragment,null,a().createElement(y,E({customStyles:d.botMessageBox,withAvatar:c},i,{key:e.id})),a().createElement(o(),{condition:!i.loading,show:l||null}))}return a().createElement(y,E({customStyles:d.botMessageBox,key:e.id,withAvatar:c},i,{customComponents:u,messages:C,setState:n}))}(e,r)):"user"===e.type?a().createElement(a().Fragment,{key:e.id},function(e){var r=s.getWidget(e.widget,E(E({},t),{scrollIntoView:T,payload:e.payload,actions:k}));return a().createElement(a().Fragment,null,a().createElement(f,{message:e.message,key:e.id,customComponents:u}),r||null)}(e)):function(e,t){return!!t[e.type]}(e,p)?a().createElement(a().Fragment,{key:e.id},function(e){var r=p[e.type],o={setState:n,state:t,scrollIntoView:T,actionProvider:m,payload:e.payload,actions:k};if(e.widget){var c=s.getWidget(e.widget,E(E({},t),{scrollIntoView:T,payload:e.payload,actions:k}));return a().createElement(a().Fragment,null,r(o),c||null)}return r(o)}(e)):void 0})),a().createElement("div",{style:{paddingBottom:"15px"}})),a().createElement("div",{className:"react-chatbot-kit-chat-input-container"},a().createElement("form",{className:"react-chatbot-kit-chat-input-form",onSubmit:function(e){if(e.preventDefault(),b&&"function"==typeof b){if(b(x)){if(A(),l)return l(x);i.parse(x)}}else{if(A(),l)return l(x);i.parse(x)}}},a().createElement("input",{className:"react-chatbot-kit-chat-input",placeholder:I,value:x,onChange:function(e){return j(e.target.value)}}),a().createElement("button",{className:"react-chatbot-kit-chat-btn-send",style:B},a().createElement(w,{className:"react-chatbot-kit-chat-btn-send-icon"}))))))},O=function(e){var t=e.message;return a().createElement("div",{className:"react-chatbot-kit-error"},a().createElement("h1",{className:"react-chatbot-kit-error-header"},"Ooops. Something is missing."),a().createElement("div",{className:"react-chatbot-kit-error-container"},a().createElement(y,{message:t,withAvatar:!0,loading:!1,id:1,customStyles:{backgroundColor:""},messages:[]})),a().createElement("a",{href:"https://fredrikoseberg.github.io/react-chatbot-kit-docs/",rel:"noopener norefferer",target:"_blank",className:"react-chatbot-kit-error-docs"},"View the docs"))};var k=function(e){return e.widgets?e.widgets:[]},M=function(e){try{new e}catch(e){return!1}return!0},C=function(){return C=Object.assign||function(e){for(var t,r=1,a=arguments.length;r<a;r++)for(var n in t=arguments[r])Object.prototype.hasOwnProperty.call(t,n)&&(e[n]=t[n]);return e},C.apply(this,arguments)};const N=function(e,t){var r=this;this.addWidget=function(e,t){var a=e.widgetName,n=e.widgetFunc,o=e.mapStateToProps,s=e.props;r[a]={widget:n,props:s,mapStateToProps:o,parentProps:C({},t)}},this.getWidget=function(e,t){var a=r[e];if(a){var n,o=C(C(C(C({scrollIntoView:t.scrollIntoView},a.parentProps),"object"==typeof(n=a.props)?n:{}),r.mapStateToProps(a.mapStateToProps,t)),{setState:r.setState,actionProvider:r.actionProvider||t.actions,actions:t.actions,state:t,payload:t.payload});return a.widget(o)||null}},this.mapStateToProps=function(e,t){if(e)return e.reduce((function(e,r){return e[r]=t[r],e}),{})},this.setState=e,this.actionProvider=t};var x=function(){return x=Object.assign||function(e){for(var t,r=1,a=arguments.length;r<a;r++)for(var n in t=arguments[r])Object.prototype.hasOwnProperty.call(t,n)&&(e[n]=t[n]);return e},x.apply(this,arguments)},j=function(e,t,r){if(r||2===arguments.length)for(var a,n=0,o=t.length;n<o;n++)!a&&n in t||(a||(a=Array.prototype.slice.call(t,0,n)),a[n]=t[n]);return e.concat(a||Array.prototype.slice.call(t))};const T=function(e){var t=e.config,n=e.actionProvider,o=e.messageParser,s=e.messageHistory,c=e.runInitialMessagesWithHistory,m=e.saveMessages,g=function(e,t){var r={};for(var a in e)Object.prototype.hasOwnProperty.call(e,a)&&t.indexOf(a)<0&&(r[a]=e[a]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var n=0;for(a=Object.getOwnPropertySymbols(e);n<a.length;n++)t.indexOf(a[n])<0&&Object.prototype.propertyIsEnumerable.call(e,a[n])&&(r[a[n]]=e[a[n]])}return r}(e,["config","actionProvider","messageParser","messageHistory","runInitialMessagesWithHistory","saveMessages"]),d="",f="";if(!t||!n||!o)return{configurationError:d="I think you forgot to feed me some props. Did you remember to pass a config, a messageparser and an actionprovider?"};var h=function(e,t){var r=[];return e.initialMessages||r.push("Config must contain property 'initialMessages', and it expects it to be an array of chatbotmessages."),r}(t);if(h.length)return{invalidPropsError:f=h.reduce((function(e,t){return e+t}),"")};var p=function(e){return e.state?e.state:{}}(t);s&&Array.isArray(s)?t.initialMessages=j([],s,!0):"string"==typeof s&&Boolean(s)&&(c||(t.initialMessages=[]));var v,y,b,w=a().useState(x({messages:j([],t.initialMessages,!0)},p)),E=w[0],P=w[1],S=a().useRef(E.messages),O=a().useRef(),C=a().useRef();(0,r.useEffect)((function(){S.current=E.messages})),(0,r.useEffect)((function(){s&&Array.isArray(s)&&P((function(e){return x(x({},e),{messages:s})}))}),[]),(0,r.useEffect)((function(){var e=C.current;return function(){if(m&&"function"==typeof m){var t=e.innerHTML.toString();m(S.current,t)}}}),[]),(0,r.useEffect)((function(){O.current=E}),[E]);var T=n,A=o;return M(T)&&M(A)?(v=new n(i,P,u,O.current,l,g),y=new N(P,v),b=new o(v,O.current),k(t).forEach((function(e){return null==y?void 0:y.addWidget(e,g)}))):(v=n,b=o,y=new N(P,null),k(t).forEach((function(e){return null==y?void 0:y.addWidget(e,g)}))),{widgetRegistry:y,actionProv:v,messagePars:b,configurationError:d,invalidPropsError:f,state:E,setState:P,messageContainerRef:C,ActionProvider:T,MessageParser:A}};var A=function(){return A=Object.assign||function(e){for(var t,r=1,a=arguments.length;r<a;r++)for(var n in t=arguments[r])Object.prototype.hasOwnProperty.call(t,n)&&(e[n]=t[n]);return e},A.apply(this,arguments)};const B=function(e){var t=e.actionProvider,r=e.messageParser,n=e.config,o=e.headerText,s=e.placeholderText,c=e.saveMessages,l=e.messageHistory,u=e.runInitialMessagesWithHistory,m=e.disableScrollToBottom,g=e.validator,d=function(e,t){var r={};for(var a in e)Object.prototype.hasOwnProperty.call(e,a)&&t.indexOf(a)<0&&(r[a]=e[a]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var n=0;for(a=Object.getOwnPropertySymbols(e);n<a.length;n++)t.indexOf(a[n])<0&&Object.prototype.propertyIsEnumerable.call(e,a[n])&&(r[a[n]]=e[a[n]])}return r}(e,["actionProvider","messageParser","config","headerText","placeholderText","saveMessages","messageHistory","runInitialMessagesWithHistory","disableScrollToBottom","validator"]),f=T(A({config:n,actionProvider:t,messageParser:r,messageHistory:l,saveMessages:c,runInitialMessagesWithHistory:u},d)),h=f.configurationError,p=f.invalidPropsError,v=f.ActionProvider,y=f.MessageParser,b=f.widgetRegistry,w=f.messageContainerRef,E=f.actionProv,P=f.messagePars,k=f.state,C=f.setState;if(h)return a().createElement(O,{message:h});if(p.length)return a().createElement(O,{message:p});var N=function(e){return e.customStyles?e.customStyles:{}}(n),x=function(e){return e.customComponents?e.customComponents:{}}(n),j=function(e){return e.botName?e.botName:"Bot"}(n),B=function(e){return e.customMessages?e.customMessages:{}}(n);return M(v)&&M(y)?a().createElement(S,{state:k,setState:C,widgetRegistry:b,actionProvider:E,messageParser:P,customMessages:B,customComponents:A({},x),botName:j,customStyles:A({},N),headerText:o,placeholderText:s,validator:g,messageHistory:l,disableScrollToBottom:m,messageContainerRef:w}):a().createElement(v,{state:k,setState:C,createChatBotMessage:i},a().createElement(y,null,a().createElement(S,{state:k,setState:C,widgetRegistry:b,actionProvider:v,messageParser:y,customMessages:B,customComponents:A({},x),botName:j,customStyles:A({},N),headerText:o,placeholderText:s,validator:g,messageHistory:l,disableScrollToBottom:m,messageContainerRef:w})))},H=B;module.exports=t})();
+(() => {
+    "use strict";
+    var e = {
+        n: t => {
+            var r = t && t.__esModule ? () => t.default : () => t;
+            return e.d(r, { a: r }), r
+        }, d: (t, r) => { for (var a in r) e.o(r, a) && !e.o(t, a) && Object.defineProperty(t, a, { enumerable: !0, get: r[a] }) }, o: (e, t) => Object.prototype.hasOwnProperty.call(e, t), r: e => { "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(e, "__esModule", { value: !0 }) }
+    }, t = {};
+    e.r(t), e.d(t, {
+        Chatbot: () => B, createChatBotMessage: () => i, createClientMessage: () => u, createCustomMessage: () => l, default: () => H, useChatbot: () => T
+    });
+    const r = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+    var a = e.n(r);
+    const n = __webpack_require__(/*! react-conditionally-render */ "./node_modules/react-conditionally-render/dist/index.js");
+    var o = e.n(n), s = function () {
+        return s = Object.assign || function (e) { for (var t, r = 1, a = arguments.length; r < a; r++)for (var n in t = arguments[r]) Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]); return e }, s.apply(this, arguments)
+    },
+        c = function (e, t) { return { message: e, type: t, id: Math.round(Date.now() * Math.random()) } },
+        i = function (e, t) { return s(s(s({}, c(e, "bot")), t), { loading: !0 }) },
+        l = function (e, t, r) { return s(s({}, c(e, t)), r) },
+        u = function (e, t) { return s(s({}, c(e, "user")), t) },
+        m = function (e) { for (var t = [], r = 1; r < arguments.length; r++)t[r - 1] = arguments[r]; if (e) return e.apply(void 0, t) };
+    function g() { return g = Object.assign || function (e) { for (var t = 1; t < arguments.length; t++) { var r = arguments[t]; for (var a in r) Object.prototype.hasOwnProperty.call(r, a) && (e[a] = r[a]) } return e }, g.apply(this, arguments) }
+    
+    
+    
+    
+    
+    
+    
+    var svg = `<?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="512px" height="512px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g><path style="opacity:0.984" fill="#b73e3e" d="M 246.5,-0.5 C 252.5,-0.5 258.5,-0.5 264.5,-0.5C 287.959,9.09284 295.792,26.0928 288,50.5C 282.715,59.9485 274.882,66.2818 264.5,69.5C 258.486,70.7028 252.486,70.7028 246.5,69.5C 225.177,61.9632 216.677,46.9632 221,24.5C 225.443,11.8888 233.943,3.55542 246.5,-0.5 Z"/></g>
+    <g><path style="opacity:0.981" fill="#a5a5a4" d="M 246.5,69.5 C 252.486,70.7028 258.486,70.7028 264.5,69.5C 264.5,93.1667 264.5,116.833 264.5,140.5C 258.5,140.5 252.5,140.5 246.5,140.5C 246.5,116.833 246.5,93.1667 246.5,69.5 Z"/></g>
+    <g><path style="opacity:0.997" fill="#e12929" d="M 246.5,140.5 C 252.5,140.5 258.5,140.5 264.5,140.5C 317.501,140.333 370.501,140.5 423.5,141C 447.333,146.167 461.833,160.667 467,184.5C 467.5,202.164 467.667,219.83 467.5,237.5C 467.5,273.167 467.5,308.833 467.5,344.5C 467.936,363.88 467.436,383.213 466,402.5C 458.495,424.335 443.329,437.168 420.5,441C 351.167,441.333 281.833,441.667 212.5,442C 181.02,461.575 150.02,481.908 119.5,503C 112.335,505.832 107.501,503.665 105,496.5C 104.973,479.076 104.306,461.742 103,444.5C 102.097,443.299 100.931,442.465 99.5,442C 69.9066,440.719 51.4066,425.885 44,397.5C 43.5001,379.836 43.3334,362.17 43.5,344.5C 43.5,308.833 43.5,273.167 43.5,237.5C 43.3334,219.83 43.5001,202.164 44,184.5C 49.1667,160.667 63.6667,146.167 87.5,141C 140.499,140.5 193.499,140.333 246.5,140.5 Z"/></g>
+    <g><path style="opacity:1" fill="#fdfdfe" d="M 185.5,304.5 C 185.987,305.473 186.487,306.473 187,307.5C 187.5,282.502 187.667,257.502 187.5,232.5C 195.167,232.5 202.833,232.5 210.5,232.5C 210.5,268.833 210.5,305.167 210.5,341.5C 201.808,341.831 193.141,341.498 184.5,340.5C 168.49,315.805 152.49,291.138 136.5,266.5C 136.217,265.711 135.717,265.044 135,264.5C 134.5,290.165 134.333,315.831 134.5,341.5C 126.833,341.5 119.167,341.5 111.5,341.5C 111.5,305.167 111.5,268.833 111.5,232.5C 120.506,232.334 129.506,232.5 138.5,233C 154.389,256.716 170.056,280.549 185.5,304.5 Z"/></g>
+    <g><path style="opacity:1" fill="#e9e9e9" d="M 187.5,232.5 C 187.667,257.502 187.5,282.502 187,307.5C 186.487,306.473 185.987,305.473 185.5,304.5C 186.167,280.5 186.833,256.5 187.5,232.5 Z"/></g>
+    <g><path style="opacity:1" fill="#fdfdfe" d="M 234.5,232.5 C 255.833,232.5 277.167,232.5 298.5,232.5C 298.5,239.167 298.5,245.833 298.5,252.5C 285.5,252.5 272.5,252.5 259.5,252.5C 259.5,260.5 259.5,268.5 259.5,276.5C 271.5,276.5 283.5,276.5 295.5,276.5C 295.5,283.167 295.5,289.833 295.5,296.5C 283.5,296.5 271.5,296.5 259.5,296.5C 259.5,304.833 259.5,313.167 259.5,321.5C 273.167,321.5 286.833,321.5 300.5,321.5C 300.5,328.167 300.5,334.833 300.5,341.5C 278.5,341.5 256.5,341.5 234.5,341.5C 234.5,305.167 234.5,268.833 234.5,232.5 Z"/></g>
+    <g><path style="opacity:1" fill="#fdfdfe" d="M 313.5,232.5 C 323.522,232.168 333.522,232.501 343.5,233.5C 349.94,246.713 356.107,260.047 362,273.5C 368.163,259.673 374.997,246.173 382.5,233C 391.833,232.333 401.167,232.333 410.5,233C 399.375,250.75 388.375,268.583 377.5,286.5C 388.635,304.8 399.969,322.966 411.5,341C 401.483,341.832 391.483,341.666 381.5,340.5C 373.991,327.162 367.158,313.495 361,299.5C 354.246,313.506 347.08,327.34 339.5,341C 329.816,341.832 320.149,341.665 310.5,340.5C 322.046,322.79 333.38,304.957 344.5,287C 333.77,269.038 323.437,250.872 313.5,232.5 Z"/></g>
+    <g><path style="opacity:0.989" fill="rgba(225,41,41,0.743)" d="M 43.5,237.5 C 43.5,273.167 43.5,308.833 43.5,344.5C 33.6845,345.073 24.0178,344.24 14.5,342C 7.10298,338.111 2.10298,332.278 -0.5,324.5C -0.5,301.833 -0.5,279.167 -0.5,256.5C 2.33937,248.04 8.00604,242.207 16.5,239C 25.4178,237.586 34.4178,237.086 43.5,237.5 Z"/></g>
+    <g><path style="opacity:0.989" fill="rgba(233,43,43,0.728)" d="M 467.5,237.5 C 476.582,237.086 485.582,237.586 494.5,239C 502.542,242.633 508.209,248.466 511.5,256.5C 511.5,279.167 511.5,301.833 511.5,324.5C 507.688,335.474 500.022,341.974 488.5,344C 481.508,344.5 474.508,344.666 467.5,344.5C 467.5,308.833 467.5,273.167 467.5,237.5 Z"/></g>
+    <g><path style="opacity:1" fill="#d5e5f3" d="M 136.5,266.5 C 135.833,291.5 135.167,316.5 134.5,341.5C 134.333,315.831 134.5,290.165 135,264.5C 135.717,265.044 136.217,265.711 136.5,266.5 Z"/></g>
+    </svg>
+    `;
+// Create a DOMParser
+var parser = new DOMParser();
+
+// Parse the SVG text
+var svgDoc = parser.parseFromString(svg, 'image/svg+xml');
+
+// Get the root SVG element
+var svgElement = svgDoc.documentElement;
+
+// Append the SVG element to the body or any other container
+document.body.appendChild(svgElement);
+    
+
+
+
+
+
+
+
+    const d = ({ styles: e = {}, ...t }) => a().createElement
+        ("svg", g({ xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 512 512" }, t), a().createElement("path", { d: "M256 288c79.5 0 144-64.5 144-144S335.5 0 256 0 112 64.5 112 144s64.5 144 144 144zm128 32h-55.1c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16H128C57.3 320 0 377.3 0 448v16c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48v-16c0-70.7-57.3-128-128-128z" })),
+        f = function (e) {
+            var t = e.message, r = e.customComponents; return a().createElement("div", { className: "react-chatbot-kit-user-chat-message-container" }, a().createElement(o(), { condition: !!r.userChatMessage, show: m(r.userChatMessage, { message: t }), elseShow: a().createElement("div", { className: "react-chatbot-kit-user-chat-message" }, t, a().createElement("div", { className: "react-chatbot-kit-user-chat-message-arrow" })) }), a().createElement(o(), { condition: !!r.userAvatar, show: m(r.userAvatar), elseShow: a().createElement("div", { className: "react-chatbot-kit-user-avatar" }, a().createElement("div", { className: "react-chatbot-kit-user-avatar-container" }, a().createElement(d, { className: "react-chatbot-kit-user-avatar-icon" }))) }))
+        },
+        h = function () {
+            return a().createElement("div", { className: "react-chatbot-kit-chat-bot-avatar" }, 
+            a().createElement("div", { className: "react-chatbot-kit-chat-bot-avatar-container" }, 
+            a().createElement("p", { className: "react-chatbot-kit-chat-bot-avatar-letter" }, document.body.appendChild(svgElement))))
+        },
+        p = function () {
+            return a().createElement("div", { className: "chatbot-loader-container" }, a().createElement("svg", { id: "dots", width: "50px", height: "21px", viewBox: "0 0 132 58", version: "1.1", xmlns: "http://www.w3.org/2000/svg" }
+                , a().createElement("g", { stroke: "none", fill: "none" }, a().createElement("g",
+                    { id: "chatbot-loader", fill: "#fff" }, a().createElement("circle", { id: "chatbot-loader-dot1", cx: "25", cy: "30", r: "13" }), a().createElement("circle", { id: "chatbot-loader-dot2", cx: "65", cy: "30", r: "13" }), a().createElement("circle", { id: "chatbot-loader-dot3", cx: "105", cy: "30", r: "13" })))))
+        };
+    var v = function () {
+        return v = Object.assign || function (e) {
+            for (var t, r = 1, a = arguments.length; r < a; r++)for (var n in t = arguments[r]) Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]);
+            return e
+        },
+            v.apply(this, arguments)
+    };
+    const y = function (e) {
+        var t = e.message, n = e.withAvatar, s = void 0 === n || n, c = e.loading, i = e.messages, l = e.customComponents, u = e.setState, g = e.customStyles, d = e.delay, f = e.id, y = (0, r.useState)(!1), b = y[0], w = y[1]; (0, r.useEffect)((function () {
+            var e;
+            return function (t, r) {
+                var a = 750;
+                d && (a += d), e = setTimeout((function () {
+                    var e = function (e, t, r) { if (r || 2 === arguments.length) for (var a, n = 0, o = t.length; n < o; n++)!a && n in t || (a || (a = Array.prototype.slice.call(t, 0, n)), a[n] = t[n]); return e.concat(a || Array.prototype.slice.call(t)) }
+                        ([], t, !0).find((function (e) { return e.id === f })); e && (e.loading = !1, e.delay = void 0, r((function (t) { var r = t.messages, a = r.findIndex((function (e) { return e.id === f })); return r[a] = e, v(v({}, t), { messages: r }) })))
+                }), a)
+            }(i, u), function () { clearTimeout(e) }
+        }), [d, f]), (0, r.useEffect)((function () { d ? setTimeout((function () { return w(!0) }), d) : w(!0) }), [d]); var E = { backgroundColor: "" }, P = { borderRightColor: "" }; return g && (E.backgroundColor = g.backgroundColor, P.borderRightColor = g.backgroundColor), a().createElement(o(), { condition: b, show: a().createElement("div", { className: "react-chatbot-kit-chat-bot-message-container" }, a().createElement(o(), { condition: s, show: a().createElement(o(), { condition: !!(null == l ? void 0 : l.botAvatar), show: m(null == l ? void 0 : l.botAvatar), elseShow: a().createElement(h, null) }) }), a().createElement(o(), { condition: !!(null == l ? void 0 : l.botChatMessage), show: m(null == l ? void 0 : l.botChatMessage, { message: t, loader: a().createElement(p, null) }), elseShow: a().createElement("div", { className: "react-chatbot-kit-chat-bot-message", style: E }, a().createElement(o(), { condition: c, show: a().createElement(p, null), elseShow: a().createElement("span", null, t) }), a().createElement(o(), { condition: s, show: a().createElement("div", { className: "react-chatbot-kit-chat-bot-message-arrow", style: P }) })) })) })
+    }; function b() { return b = Object.assign || function (e) { for (var t = 1; t < arguments.length; t++) { var r = arguments[t]; for (var a in r) Object.prototype.hasOwnProperty.call(r, a) && (e[a] = r[a]) } return e }, b.apply(this, arguments) } const w = ({ styles: e = {}, ...t }) => a().createElement("svg", b({ xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 512 512" }, t), a().createElement("path", { d: "M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z" })); var E = function () { return E = Object.assign || function (e) { for (var t, r = 1, a = arguments.length; r < a; r++)for (var n in t = arguments[r]) Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]); return e }, E.apply(this, arguments) }, P = function (e, t, r) { if (r || 2 === arguments.length) for (var a, n = 0, o = t.length; n < o; n++)!a && n in t || (a || (a = Array.prototype.slice.call(t, 0, n)), a[n] = t[n]); return e.concat(a || Array.prototype.slice.call(t)) }; const S = function (e) { var t = e.state, n = e.setState, s = e.widgetRegistry, i = e.messageParser, l = e.parse, u = e.customComponents, m = e.actionProvider, g = e.botName, d = e.customStyles, h = e.headerText, p = e.customMessages, v = e.placeholderText, b = e.validator, S = e.disableScrollToBottom, O = e.messageHistory, k = e.actions, M = e.messageContainerRef, C = t.messages, N = (0, r.useState)(""), x = N[0], j = N[1], T = function () { setTimeout((function () { var e; M.current && (M.current.scrollTop = null === (e = null == M ? void 0 : M.current) || void 0 === e ? void 0 : e.scrollHeight) }), 50) }; (0, r.useEffect)((function () { S || T() })); var A = function () { n((function (e) { return E(E({}, e), { messages: P(P([], e.messages, !0), [c(x, "user")], !1) }) })), T(), j("") }, B = { backgroundColor: "" }; d && d.chatButton && (B.backgroundColor = d.chatButton.backgroundColor); var H = "Hi! I'm " + g; h && (H = h); var I = "Write your message here"; return v && (I = v), a().createElement("div", { className: "react-chatbot-kit-chat-container" }, a().createElement("div", { className: "react-chatbot-kit-chat-inner-container" }, a().createElement(o(), { condition: !!u.header, show: u.header && u.header(m), elseShow: a().createElement("div", { className: "react-chatbot-kit-chat-header" }, H) }), a().createElement("div", { className: "react-chatbot-kit-chat-message-container", ref: M }, a().createElement(o(), { condition: "string" == typeof O && Boolean(O), show: a().createElement("div", { dangerouslySetInnerHTML: { __html: O } }) }), C.map((function (e, r) { return "bot" === e.type ? a().createElement(a().Fragment, { key: e.id }, function (e, r) { var c; c = e.withAvatar ? e.withAvatar : function (e, t) { if (0 === t) return !0; var r = e[t - 1]; return !("bot" === r.type && !r.widget) }(C, r); var i = E(E({}, e), { setState: n, state: t, customComponents: u, widgetRegistry: s, messages: C, actions: k }); if (e.widget) { var l = s.getWidget(i.widget, E(E({}, t), { scrollIntoView: T, payload: e.payload, actions: k })); return a().createElement(a().Fragment, null, a().createElement(y, E({ customStyles: d.botMessageBox, withAvatar: c }, i, { key: e.id })), a().createElement(o(), { condition: !i.loading, show: l || null })) } return a().createElement(y, E({ customStyles: d.botMessageBox, key: e.id, withAvatar: c }, i, { customComponents: u, messages: C, setState: n })) }(e, r)) : "user" === e.type ? a().createElement(a().Fragment, { key: e.id }, function (e) { var r = s.getWidget(e.widget, E(E({}, t), { scrollIntoView: T, payload: e.payload, actions: k })); return a().createElement(a().Fragment, null, a().createElement(f, { message: e.message, key: e.id, customComponents: u }), r || null) }(e)) : function (e, t) { return !!t[e.type] }(e, p) ? a().createElement(a().Fragment, { key: e.id }, function (e) { var r = p[e.type], o = { setState: n, state: t, scrollIntoView: T, actionProvider: m, payload: e.payload, actions: k }; if (e.widget) { var c = s.getWidget(e.widget, E(E({}, t), { scrollIntoView: T, payload: e.payload, actions: k })); return a().createElement(a().Fragment, null, r(o), c || null) } return r(o) }(e)) : void 0 })), a().createElement("div", { style: { paddingBottom: "15px" } })), a().createElement("div", { className: "react-chatbot-kit-chat-input-container" }, a().createElement("form", { className: "react-chatbot-kit-chat-input-form", onSubmit: function (e) { if (e.preventDefault(), b && "function" == typeof b) { if (b(x)) { if (A(), l) return l(x); i.parse(x) } } else { if (A(), l) return l(x); i.parse(x) } } }, a().createElement("input", { className: "react-chatbot-kit-chat-input", placeholder: I, value: x, onChange: function (e) { return j(e.target.value) } }), a().createElement("button", { className: "react-chatbot-kit-chat-btn-send", style: B }, a().createElement(w, { className: "react-chatbot-kit-chat-btn-send-icon" })))))) }, O = function (e) { var t = e.message; return a().createElement("div", { className: "react-chatbot-kit-error" }, a().createElement("h1", { className: "react-chatbot-kit-error-header" }, "Ooops. Something is missing."), a().createElement("div", { className: "react-chatbot-kit-error-container" }, a().createElement(y, { message: t, withAvatar: !0, loading: !1, id: 1, customStyles: { backgroundColor: "" }, messages: [] })), a().createElement("a", { href: "https://fredrikoseberg.github.io/react-chatbot-kit-docs/", rel: "noopener norefferer", target: "_blank", className: "react-chatbot-kit-error-docs" }, "View the docs")) }; var k = function (e) { return e.widgets ? e.widgets : [] }, M = function (e) { try { new e } catch (e) { return !1 } return !0 }, C = function () { return C = Object.assign || function (e) { for (var t, r = 1, a = arguments.length; r < a; r++)for (var n in t = arguments[r]) Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]); return e }, C.apply(this, arguments) }; const N = function (e, t) { var r = this; this.addWidget = function (e, t) { var a = e.widgetName, n = e.widgetFunc, o = e.mapStateToProps, s = e.props; r[a] = { widget: n, props: s, mapStateToProps: o, parentProps: C({}, t) } }, this.getWidget = function (e, t) { var a = r[e]; if (a) { var n, o = C(C(C(C({ scrollIntoView: t.scrollIntoView }, a.parentProps), "object" == typeof (n = a.props) ? n : {}), r.mapStateToProps(a.mapStateToProps, t)), { setState: r.setState, actionProvider: r.actionProvider || t.actions, actions: t.actions, state: t, payload: t.payload }); return a.widget(o) || null } }, this.mapStateToProps = function (e, t) { if (e) return e.reduce((function (e, r) { return e[r] = t[r], e }), {}) }, this.setState = e, this.actionProvider = t }; var x = function () { return x = Object.assign || function (e) { for (var t, r = 1, a = arguments.length; r < a; r++)for (var n in t = arguments[r]) Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]); return e }, x.apply(this, arguments) }, j = function (e, t, r) { if (r || 2 === arguments.length) for (var a, n = 0, o = t.length; n < o; n++)!a && n in t || (a || (a = Array.prototype.slice.call(t, 0, n)), a[n] = t[n]); return e.concat(a || Array.prototype.slice.call(t)) }; const T = function (e) { var t = e.config, n = e.actionProvider, o = e.messageParser, s = e.messageHistory, c = e.runInitialMessagesWithHistory, m = e.saveMessages, g = function (e, t) { var r = {}; for (var a in e) Object.prototype.hasOwnProperty.call(e, a) && t.indexOf(a) < 0 && (r[a] = e[a]); if (null != e && "function" == typeof Object.getOwnPropertySymbols) { var n = 0; for (a = Object.getOwnPropertySymbols(e); n < a.length; n++)t.indexOf(a[n]) < 0 && Object.prototype.propertyIsEnumerable.call(e, a[n]) && (r[a[n]] = e[a[n]]) } return r }(e, ["config", "actionProvider", "messageParser", "messageHistory", "runInitialMessagesWithHistory", "saveMessages"]), d = "", f = ""; if (!t || !n || !o) return { configurationError: d = "I think you forgot to feed me some props. Did you remember to pass a config, a messageparser and an actionprovider?" }; var h = function (e, t) { var r = []; return e.initialMessages || r.push("Config must contain property 'initialMessages', and it expects it to be an array of chatbotmessages."), r }(t); if (h.length) return { invalidPropsError: f = h.reduce((function (e, t) { return e + t }), "") }; var p = function (e) { return e.state ? e.state : {} }(t); s && Array.isArray(s) ? t.initialMessages = j([], s, !0) : "string" == typeof s && Boolean(s) && (c || (t.initialMessages = [])); var v, y, b, w = a().useState(x({ messages: j([], t.initialMessages, !0) }, p)), E = w[0], P = w[1], S = a().useRef(E.messages), O = a().useRef(), C = a().useRef(); (0, r.useEffect)((function () { S.current = E.messages })), (0, r.useEffect)((function () { s && Array.isArray(s) && P((function (e) { return x(x({}, e), { messages: s }) })) }), []), (0, r.useEffect)((function () { var e = C.current; return function () { if (m && "function" == typeof m) { var t = e.innerHTML.toString(); m(S.current, t) } } }), []), (0, r.useEffect)((function () { O.current = E }), [E]); var T = n, A = o; return M(T) && M(A) ? (v = new n(i, P, u, O.current, l, g), y = new N(P, v), b = new o(v, O.current), k(t).forEach((function (e) { return null == y ? void 0 : y.addWidget(e, g) }))) : (v = n, b = o, y = new N(P, null), k(t).forEach((function (e) { return null == y ? void 0 : y.addWidget(e, g) }))), { widgetRegistry: y, actionProv: v, messagePars: b, configurationError: d, invalidPropsError: f, state: E, setState: P, messageContainerRef: C, ActionProvider: T, MessageParser: A } }; var A = function () { return A = Object.assign || function (e) { for (var t, r = 1, a = arguments.length; r < a; r++)for (var n in t = arguments[r]) Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]); return e }, A.apply(this, arguments) }; const B = function (e) { var t = e.actionProvider, r = e.messageParser, n = e.config, o = e.headerText, s = e.placeholderText, c = e.saveMessages, l = e.messageHistory, u = e.runInitialMessagesWithHistory, m = e.disableScrollToBottom, g = e.validator, d = function (e, t) { var r = {}; for (var a in e) Object.prototype.hasOwnProperty.call(e, a) && t.indexOf(a) < 0 && (r[a] = e[a]); if (null != e && "function" == typeof Object.getOwnPropertySymbols) { var n = 0; for (a = Object.getOwnPropertySymbols(e); n < a.length; n++)t.indexOf(a[n]) < 0 && Object.prototype.propertyIsEnumerable.call(e, a[n]) && (r[a[n]] = e[a[n]]) } return r }(e, ["actionProvider", "messageParser", "config", "headerText", "placeholderText", "saveMessages", "messageHistory", "runInitialMessagesWithHistory", "disableScrollToBottom", "validator"]), f = T(A({ config: n, actionProvider: t, messageParser: r, messageHistory: l, saveMessages: c, runInitialMessagesWithHistory: u }, d)), h = f.configurationError, p = f.invalidPropsError, v = f.ActionProvider, y = f.MessageParser, b = f.widgetRegistry, w = f.messageContainerRef, E = f.actionProv, P = f.messagePars, k = f.state, C = f.setState; if (h) return a().createElement(O, { message: h }); if (p.length) return a().createElement(O, { message: p }); var N = function (e) { return e.customStyles ? e.customStyles : {} }(n), x = function (e) { return e.customComponents ? e.customComponents : {} }(n), j = function (e) { return e.botName ? e.botName : "Bot" }(n), B = function (e) { return e.customMessages ? e.customMessages : {} }(n); return M(v) && M(y) ? a().createElement(S, { state: k, setState: C, widgetRegistry: b, actionProvider: E, messageParser: P, customMessages: B, customComponents: A({}, x), botName: j, customStyles: A({}, N), headerText: o, placeholderText: s, validator: g, messageHistory: l, disableScrollToBottom: m, messageContainerRef: w }) : a().createElement(v, { state: k, setState: C, createChatBotMessage: i }, a().createElement(y, null, a().createElement(S, { state: k, setState: C, widgetRegistry: b, actionProvider: v, messageParser: y, customMessages: B, customComponents: A({}, x), botName: j, customStyles: A({}, N), headerText: o, placeholderText: s, validator: g, messageHistory: l, disableScrollToBottom: m, messageContainerRef: w }))) }, H = B; module.exports = t
+})();
 
 /***/ }),
 
@@ -2470,11 +2568,15 @@ var ActionProvider = /*#__PURE__*/function () {
       _this.updateChatbotState(message);
     });
     _defineProperty(this, "handleStore", function () {
-      var message = _this.createChatBotMessage("if you have any issues with the products page please contact the team.");
+      var message = _this.createChatBotMessage("if you have any issues with the products page please contact the team.", {
+        widget: "HeadToStore"
+      });
       _this.updateChatbotState(message);
     });
     _defineProperty(this, "handleInstructor", function () {
-      var message = _this.createChatBotMessage("please login for more information");
+      var message = _this.createChatBotMessage("We take good care of selecting good Instructors for our affiliated students. Please find more information on the official website", {
+        widget: "HeadToInstructors"
+      });
 
       //handle session details
       _this.updateChatbotState(message);
@@ -2540,6 +2642,12 @@ var ActionProvider = /*#__PURE__*/function () {
     _defineProperty(this, "handleJuanaNexo", function () {
       var message = _this.createChatBotMessage("Our Parent Company is JuanaTech, here is the link to our Introduction on their domain", {
         widget: 'headtoJuanaNexo'
+      });
+      _this.updateChatbotState(message);
+    });
+    _defineProperty(this, "handleCertificate", function () {
+      var message = _this.createChatBotMessage("Here is the link to the webpage to handle Certicate Verification", {
+        widget: 'headToCertificate'
       });
       _this.updateChatbotState(message);
     });
@@ -2619,8 +2727,8 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 // import ActionProvider from '../../../recheck/chat/src/chatbot/ActionProvider';
 
 var config = {
-  botName: "Inkie",
-  initialMessages: [(0,_locomotiveb93_react_chatbot_kit__WEBPACK_IMPORTED_MODULE_1__.createChatBotMessage)("Hi, I am Inkie! "), (0,_locomotiveb93_react_chatbot_kit__WEBPACK_IMPORTED_MODULE_1__.createChatBotMessage)("Hope you are doing well. What would you like to Ask?", {
+  botName: "Nex",
+  initialMessages: [/*createChatBotMessage("Hi, I am Nex! "),*/(0,_locomotiveb93_react_chatbot_kit__WEBPACK_IMPORTED_MODULE_1__.createChatBotMessage)("Hope you are doing well. What would you like to Ask?", {
     //options object is given here
     widget: 'BaseOptions'
   })],
@@ -2708,13 +2816,57 @@ var config = {
       }]
     }
   }, {
+    widgetName: 'HeadToStore',
+    widgetFunc: function widgetFunc(props) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_LinkList_LinkList__WEBPACK_IMPORTED_MODULE_3__["default"], _objectSpread({}, props));
+    },
+    props: {
+      options: [{
+        text: "head to the Store",
+        url: "https://justnexo.com/products",
+        id: 1
+      }]
+    }
+  }, {
+    widgetName: 'HeadToInstructors',
+    widgetFunc: function widgetFunc(props) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_LinkList_LinkList__WEBPACK_IMPORTED_MODULE_3__["default"], _objectSpread({}, props));
+    },
+    props: {
+      options: [{
+        text: "more on Instructors",
+        url: "https://justnexo.com/instructors",
+        id: 1
+      }, {
+        text: "Find an Instructor",
+        url: "https://justnexo.com/instructor-finder",
+        id: 2
+      }, {
+        text: "become an Instructor",
+        url: "https://justnexo.com/become-instructor",
+        id: 3
+      }]
+    }
+  }, {
+    widgetName: "headToCertificate",
+    widgetFunc: function widgetFunc(props) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_LinkList_LinkList__WEBPACK_IMPORTED_MODULE_3__["default"], _objectSpread({}, props));
+    },
+    props: {
+      options: [{
+        text: "Certificate Verification",
+        url: "https://justnexo.com/certificate_validation",
+        id: 1
+      }]
+    }
+  }, {
     widgetName: 'contactus',
     widgetFunc: function widgetFunc(props) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_LinkList_LinkList__WEBPACK_IMPORTED_MODULE_3__["default"], _objectSpread({}, props));
     },
     props: {
       options: [{
-        text: "head to the Forums",
+        text: "Engage with real conversations in the Forums",
         url: "https://justnexo.com/forums",
         id: 1
       }, {
@@ -2860,23 +3012,23 @@ var BaseOptions = function BaseOptions(props) {
   {
     text: "Visit Store",
     handler: props.actionProvider.handleStore,
-    id: 3
+    id: 2
   }, {
     text: "Know our Instructors",
     handler: props.actionProvider.handleInstructor,
+    id: 3
+  }, {
+    text: "Verify Certificate?",
+    handler: props.actionProvider.handleCertificate,
     id: 4
   }, {
-    text: "I don't see anything here",
-    handler: props.actionProvider.handleForum,
-    id: 5
-  }, {
-    text: "contact us",
+    text: "Contact us or Know More",
     handler: props.actionProvider.handlecontactus,
-    id: 6
+    id: 5
   }, {
     text: "Where did all this start ?",
     handler: props.actionProvider.handleJuanaNexo,
-    id: 7
+    id: 6
   }];
   var optionsMarkup = options.map(function (option) {
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
