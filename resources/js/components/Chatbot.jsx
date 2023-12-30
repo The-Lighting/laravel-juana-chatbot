@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import { Chatbot } from '@locomotiveb93/react-chatbot-kit';
-import '@locomotiveb93/react-chatbot-kit/build/main.css';
+import { Chatbot } from 'react-chatbot-kit';
+import 'react-chatbot-kit/build/main.css';
 
 import ActionProvider from './chatbot/ActionProvider';
 import MessageParser from './chatbot/MessageParser';
