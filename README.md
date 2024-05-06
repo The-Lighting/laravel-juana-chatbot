@@ -1,4 +1,4 @@
-## https://shivambhardwaj93.github.io/laravel-juana-chatbot/
+## https://the-lighting.github.io/laravel-juana-chatbot/
 
 # Don't delete or merge any of the branches
 
