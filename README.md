@@ -1,4 +1,4 @@
-# JustNexo Chatbot README
+# JustNexo Chatbot
 
 ## Introduction
 
@@ -14,12 +14,44 @@ Make sure you have the following tools installed on your machine:
 
 - Node.js and npm (Node Package Manager)
 - React
+- PHP
 
 ### Installation
 
-1. Clone the repository:
-```bash
-    git clone <repository_url>
-   cd justnexo-chatbot
-```
+1. Clone the repository and navigate into the project directory:
+
+   ```
+   git clone <repository_url> && cd <respository_name>
+   ```
+
+2. Ensure Node.js and npm are installed. If not, download and install them from [here](https://nodejs.org/).
+
+3. Install React globally if not already installed:
+
+   ```
+   npm install -g create-react-app
+   ```
+
+4. Install project dependencies:
+
+   ```
+   npm install
+   ```
+5. Build the webpack if not already created:
+   ```
+   npm run dev
+   ```
   
+6. Rename `.env.example` to `.env`.
+
+7. Generate the `APP_KEY` value:
+
+   ```
+   php artisan key:generate
+   ```
+
+8. Start the local server:
+
+   ```
+   php artisan serve
+   ```
