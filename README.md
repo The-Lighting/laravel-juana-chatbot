@@ -21,7 +21,8 @@ Make sure you have the following tools installed on your machine:
 1. Clone the repository and navigate into the project directory:
 
    ```
-   git clone <repository_url> && cd <respository_name>
+   git clone <repository_url>
+   cd <respository_name>
    ```
 
 2. Ensure Node.js and npm are installed. If not, download and install them from [here](https://nodejs.org/).
