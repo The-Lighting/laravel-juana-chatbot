@@ -1,7 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./node_modules/@react-chatbot-kit/build/index.js":
+/***/ "./node_modules/@locomotiveb93/react-chatbot-kit/build/index.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@locomotiveb93/react-chatbot-kit/build/index.js ***!
   \**********************************************************************/
@@ -2988,12 +2988,7 @@
         text: "Where did all this start ?",
         handler: props.actionProvider.handleJuanaNexo,
         id: 6
-      }, {
-		text: "LMS",
-		handler: props.actionProvider.handleLMS,
-		id: 7
-	  } // Handle Link to LMS
-	  ];
+      }];
       var optionsMarkup = options.map(function (option) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
           className: "option-button",
