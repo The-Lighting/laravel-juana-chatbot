@@ -40,9 +40,9 @@ Make sure you have the following tools installed on your machine:
    npm run dev
    ```
 5. Install composer:
-```
-composer install
-```
+   ```
+   composer install
+   ```
 
 6. Rename `.env.example` to `.env`.
 
