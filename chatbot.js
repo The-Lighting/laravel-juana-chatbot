@@ -695,7 +695,7 @@
     
       // This behaves neither like String nor Uint8Array in that we set start/end
       // to their upper/lower bounds if the value passed is out of range.
-      // undefined is d specially as per ECMA-262 6th Edition,
+      // undefined is handled specially as per ECMA-262 6th Edition,
       // Section 13.3.3.7 Runtime Semantics: KeyedBindingInitialization.
       if (start === undefined || start < 0) {
         start = 0
@@ -1820,7 +1820,7 @@
     //    buffer.fill(buffer[, offset[, end]])
     //    buffer.fill(string[, offset[, end]][, encoding])
     Buffer.prototype.fill = function fill (val, start, end, encoding) {
-      //  string cases:
+      // Handle string cases:
       if (typeof val === 'string') {
         if (typeof start === 'string') {
           encoding = start
@@ -2315,7 +2315,7 @@
     
     /**
      * We'll load the axios HTTP library which allows us to easily issue requests
-     * to our Laravel back-end. This library automatically s sending the
+     * to our Laravel back-end. This library automatically handles sending the
      * CSRF token as a header based on the value of the "XSRF" token cookie.
      */
     // resources/js/bootstrap.js
@@ -2520,33 +2520,33 @@
       function ActionProvider(createChatBotMessage, setStateFunc, createClientMessage, stateRef, createCustomMessage) {
         var _this = this;
         _classCallCheck(this, ActionProvider);
-        _defineProperty(this, "Course", function () {
+        _defineProperty(this, "handleCourse", function () {
           var message = _this.createChatBotMessage("Fantastic, Please tell me about what kind/name of course you are asking for:", {
             widget: "CertainCourse"
           });
           _this.updateChatbotState(message);
         });
-        _defineProperty(this, "Store", function () {
+        _defineProperty(this, "handleStore", function () {
           var message = _this.createChatBotMessage("if you have any issues with the products page please contact the team.", {
             widget: "HeadToStore"
           });
           _this.updateChatbotState(message);
         });
-        _defineProperty(this, "Instructor", function () {
+        _defineProperty(this, "handleInstructor", function () {
           var message = _this.createChatBotMessage("We take good care of selecting good Instructors for our affiliated students. Please find more information on the official website", {
             widget: "HeadToInstructors"
           });
     
-          // session details
+          //handle session details
           _this.updateChatbotState(message);
         });
-        _defineProperty(this, "Forum", function () {
+        _defineProperty(this, "handleForum", function () {
           var message = _this.createChatBotMessage("i think you should head to forums to find what you are looking for", {
             widget: "headToForum"
           });
           _this.updateChatbotState(message);
         });
-        _defineProperty(this, "contactus", function () {
+        _defineProperty(this, "handlecontactus", function () {
           var message = [_this.createChatBotMessage("Tel: +91 11 4100 4112       Email: support@justnexo.com         JUANA TECHNOLOGIES PVT. LTD.", {
             //add config widget
             widget: "contactus"
@@ -2556,25 +2556,25 @@
           });
         });
         //implementing other courses
-        _defineProperty(this, "gamebasedlearning", function () {
-          var message = _this.createChatBotMessage("we provide courses which  learning of the child via fun games. if you would like to learn more please consider a vist to our special page for more information", {
+        _defineProperty(this, "handlegamebasedlearning", function () {
+          var message = _this.createChatBotMessage("we provide courses which handle learning of the child via fun games. if you would like to learn more please consider a vist to our special page for more information", {
             widget: "gamebasedlearninglink"
           });
           _this.updateChatbotState(message);
         });
-        _defineProperty(this, "xperientiallearning", function () {
+        _defineProperty(this, "handlexperientiallearning", function () {
           var message = _this.createChatBotMessage("In this kind of learning we emphasize on the learning of things like robotics by actually creating them. for more information-", {
             widget: "experientiallearning"
           });
           _this.updateChatbotState(message);
         });
-        _defineProperty(this, "personaldevelopment", function () {
+        _defineProperty(this, "handlepersonaldevelopment", function () {
           var message = _this.createChatBotMessage("Learn Personal Development or improve your skills online today. Choose from a wide range of Personal Development courses offered by us", {
             widget: "personalDevelopment"
           });
           _this.updateChatbotState(message);
         });
-        _defineProperty(this, "GPTResponse", function (userInput) {
+        _defineProperty(this, "handleGPTResponse", function (userInput) {
           try {
             // Replace this with the actual URL of your Express server
             var expressServerUrl = 'http://localhost:3000/chat';
@@ -2598,13 +2598,13 @@
             console.error('Error sending request to Express server:', error);
           }
         });
-        _defineProperty(this, "JuanaNexo", function () {
+        _defineProperty(this, "handleJuanaNexo", function () {
           var message = _this.createChatBotMessage("Our Parent Company is JuanaTech, here is the link to our Introduction on their domain", {
             widget: 'headtoJuanaNexo'
           });
           _this.updateChatbotState(message);
         });
-	_defineProperty(this, "handleLMS", function () {
+		_defineProperty(this, "handleLMS", function () {
           var message = _this.createChatBotMessage("Sure! You can access our Learning Management System (LMS) by clicking the button below:", {
             widget: 'HeadToLMS'
           });
@@ -2854,19 +2854,18 @@
             id: 1
           }]
         }
-      }, {
+      },
+	  {
       widgetName: 'HeadToLMS',
-     widgetFunc: function widgetFunc(props) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_LinkList_LinkList__WEBPACK_IMPORTED_MODULE_3__["default"], _objectSpread({}, props));
-        },
-        props: {
-          options: [{
-            text: "Open LMS",
-            url: "https://learning.justnexo.com",
-            id: 1
-          }]
-        }
-      }],
+      widgetFunc: (props) => <LinkList {...props} />,
+      props:{
+        options:[{
+          text: "Open LMS",
+          url: "https://learning.justnexo.com",
+          id: 1,
+        }]
+      }
+    }],
       //here we have defined the various steps in this extra
       customStyles: {
         botMessageBox: {
@@ -3010,8 +3009,7 @@
         text: "LMS",
         handler: props.actionProvider.handleLMS,
         id: 7
-      }
-	  ];
+      }];
       var optionsMarkup = options.map(function (option) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
           className: "option-button",
