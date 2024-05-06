@@ -15,34 +15,35 @@ Make sure you have the following tools installed on your machine:
 - Node.js and npm (Node Package Manager)
 - React
 - PHP
-
+- Composer
+  
 ### Installation
 
 1. Clone the repository and navigate into the project directory:
 
    ```
    git clone <repository_url>
+   ```
+   ```
    cd <respository_name>
    ```
 
 2. Ensure Node.js and npm are installed. If not, download and install them from [here](https://nodejs.org/).
 
-3. Install React globally if not already installed:
-
-   ```
-   npm install -g create-react-app
-   ```
-
-4. Install project dependencies:
+3. Install project dependencies:
 
    ```
    npm install
    ```
-5. Build the webpack if not already created:
+4. Build the webpack if not already created:
    ```
    npm run dev
    ```
-  
+5. Install composer:
+```
+composer install
+```
+
 6. Rename `.env.example` to `.env`.
 
 7. Generate the `APP_KEY` value:
@@ -52,7 +53,6 @@ Make sure you have the following tools installed on your machine:
    ```
 
 8. Start the local server:
-
    ```
    php artisan serve
    ```
