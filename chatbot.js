@@ -2604,7 +2604,7 @@
           });
           _this.updateChatbotState(message);
         }
-		_defineProperty(this, "handleLMS", function () {
+	_defineProperty(this, "handleLMS", function () {
           var message = _this.createChatBotMessage("Sure! You can access our Learning Management System (LMS) by clicking the button below:", {
             widget: 'HeadToLMS'
           });
@@ -2854,18 +2854,19 @@
             id: 1
           }]
         }
-      },
-	  {
+      }, {
       widgetName: 'HeadToLMS',
-      widgetFunc: (props) => <LinkList {...props} />,
-      props:{
-        options:[{
-          text: "Open LMS",
-          url: "https://learning.justnexo.com",
-          id: 1,
-        }]
-      }
-    }],
+     widgetFunc: function widgetFunc(props) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_LinkList_LinkList__WEBPACK_IMPORTED_MODULE_3__["default"], _objectSpread({}, props));
+        },
+        props: {
+          options: [{
+            text: "Open LMS",
+            url: "https://learning.justnexo.com",
+            id: 1
+          }]
+        }
+      }],
       //here we have defined the various steps in this extra
       customStyles: {
         botMessageBox: {
