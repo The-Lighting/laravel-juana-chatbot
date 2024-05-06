@@ -1,7 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./node_modules/@react-chatbot-kit/build/index.js":
+/***/ "./node_modules/@locomotiveb93/react-chatbot-kit/build/index.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@locomotiveb93/react-chatbot-kit/build/index.js ***!
   \**********************************************************************/
@@ -2604,6 +2604,12 @@
           });
           _this.updateChatbotState(message);
         });
+		_defineProperty(this, "handleLMS", function () {
+          var message = _this.createChatBotMessage("Sure! You can access our Learning Management System (LMS) by clicking the button below:", {
+            widget: 'HeadToLMS'
+          });
+          _this.updateChatbotState(message);
+        });
         _defineProperty(this, "handleCertificate", function () {
           var message = _this.createChatBotMessage("Here is the link to the webpage to handle Certicate Verification", {
             widget: 'headToCertificate'
@@ -2848,7 +2854,18 @@
             id: 1
           }]
         }
-      }],
+      },
+	  {
+      widgetName: 'HeadToLMS',
+      widgetFunc: (props) => <LinkList {...props} />,
+      props:{
+        options:[{
+          text: "Open LMS",
+          url: "https://learning.justnexo.com",
+          id: 1,
+        }]
+      }
+    }],
       //here we have defined the various steps in this extra
       customStyles: {
         botMessageBox: {
@@ -2988,6 +3005,10 @@
         text: "Where did all this start ?",
         handler: props.actionProvider.handleJuanaNexo,
         id: 6
+      }, {
+        text: "LMS",
+        handler: props.actionProvider.handleLMS,
+        id: 7
       }];
       var optionsMarkup = options.map(function (option) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
