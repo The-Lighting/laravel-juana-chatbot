@@ -2453,17 +2453,26 @@ var ActionProvider = /*#__PURE__*/function () {
   function ActionProvider(createChatBotMessage, setStateFunc, createClientMessage, stateRef, createCustomMessage) {
     var _this = this;
     _classCallCheck(this, ActionProvider);
+    _defineProperty(this, "handleLMS", function () {
+      var message = _this.createChatBotMessage("Sure! You can access our Learning Management System (LMS) by clicking the button below:", {
+        widget: "HeadToLMS"
+      });
+      _this.updateChatbotState(message);
+      _this.showMainMenu();
+    });
     _defineProperty(this, "handleCourse", function () {
       var message = _this.createChatBotMessage("Fantastic, Please tell me about what kind/name of course you are asking for:", {
         widget: "CertainCourse"
       });
       _this.updateChatbotState(message);
+      _this.showMainMenu();
     });
     _defineProperty(this, "handleStore", function () {
       var message = _this.createChatBotMessage("if you have any issues with the products page please contact the team.", {
         widget: "HeadToStore"
       });
       _this.updateChatbotState(message);
+      _this.showMainMenu();
     });
     _defineProperty(this, "handleInstructor", function () {
       var message = _this.createChatBotMessage("We take good care of selecting good Instructors for our affiliated students. Please find more information on the official website", {
@@ -2472,12 +2481,14 @@ var ActionProvider = /*#__PURE__*/function () {
 
       //handle session details
       _this.updateChatbotState(message);
+      _this.showMainMenu();
     });
     _defineProperty(this, "handleForum", function () {
       var message = _this.createChatBotMessage("i think you should head to forums to find what you are looking for", {
         widget: "headToForum"
       });
       _this.updateChatbotState(message);
+      _this.showMainMenu();
     });
     _defineProperty(this, "handlecontactus", function () {
       var message = [_this.createChatBotMessage("Tel: +91 11 4100 4112       Email: support@justnexo.com         JUANA TECHNOLOGIES PVT. LTD.", {
@@ -2487,6 +2498,7 @@ var ActionProvider = /*#__PURE__*/function () {
       message.forEach(function (element) {
         _this.updateChatbotState(element);
       });
+      _this.showMainMenu();
     });
     //implementing other courses
     _defineProperty(this, "handlegamebasedlearning", function () {
@@ -2494,23 +2506,26 @@ var ActionProvider = /*#__PURE__*/function () {
         widget: "gamebasedlearninglink"
       });
       _this.updateChatbotState(message);
+      _this.showMainMenu();
     });
     _defineProperty(this, "handlexperientiallearning", function () {
       var message = _this.createChatBotMessage("In this kind of learning we emphasize on the learning of things like robotics by actually creating them. for more information-", {
         widget: "experientiallearning"
       });
       _this.updateChatbotState(message);
+      _this.showMainMenu();
     });
     _defineProperty(this, "handlepersonaldevelopment", function () {
       var message = _this.createChatBotMessage("Learn Personal Development or improve your skills online today. Choose from a wide range of Personal Development courses offered by us", {
         widget: "personalDevelopment"
       });
       _this.updateChatbotState(message);
+      _this.showMainMenu();
     });
     _defineProperty(this, "handleGPTResponse", function (userInput) {
       try {
         // Replace this with the actual URL of your Express server
-        var expressServerUrl = 'http://localhost:3000/chat';
+        var expressServerUrl = "http://localhost:3000/chat";
 
         // Make a POST request to the Express server using Axios
         axios.post(expressServerUrl, {
@@ -2525,23 +2540,25 @@ var ActionProvider = /*#__PURE__*/function () {
           // Update the chatbot state with the message
           _this.updateChatbotState(message);
         })["catch"](function (error) {
-          console.error('Error sending request to Express server:', error);
+          console.error("Error sending request to Express server:", error);
         });
       } catch (error) {
-        console.error('Error sending request to Express server:', error);
+        console.error("Error sending request to Express server:", error);
       }
     });
     _defineProperty(this, "handleJuanaNexo", function () {
       var message = _this.createChatBotMessage("Our Parent Company is JuanaTech, here is the link to our Introduction on their domain", {
-        widget: 'headtoJuanaNexo'
+        widget: "headtoJuanaNexo"
       });
       _this.updateChatbotState(message);
+      _this.showMainMenu();
     });
     _defineProperty(this, "handleCertificate", function () {
       var message = _this.createChatBotMessage("Here is the link to the webpage to handle Certicate Verification", {
-        widget: 'headToCertificate'
+        widget: "headToCertificate"
       });
       _this.updateChatbotState(message);
+      _this.showMainMenu();
     });
     this.createChatBotMessage = createChatBotMessage;
     this.setState = setStateFunc;
@@ -2552,7 +2569,7 @@ var ActionProvider = /*#__PURE__*/function () {
   _createClass(ActionProvider, [{
     key: "greet",
     value: function greet() {
-      var greetingMessage = this.createChatBotMessage('How could I help you today? Please select among the following options for me to assist you better', {
+      var greetingMessage = this.createChatBotMessage("How could I help you today? Please select among the following options for me to assist you better", {
         widget: "BaseOptions"
       });
       this.updateChatbotState(greetingMessage);
@@ -2560,9 +2577,9 @@ var ActionProvider = /*#__PURE__*/function () {
   }, {
     key: "updateChatbotState",
     value: function updateChatbotState(message) {
-      // NOTE: This function is set in the constructor, and is passed in      
-      // from the top level Chatbot component. The setState function here     
-      // actually manipulates the top level state of the Chatbot, so it's     
+      // NOTE: This function is set in the constructor, and is passed in
+      // from the top level Chatbot component. The setState function here
+      // actually manipulates the top level state of the Chatbot, so it's
       // important that we make sure that we preserve the previous state.
 
       this.setState(function (prevState) {
@@ -2570,6 +2587,14 @@ var ActionProvider = /*#__PURE__*/function () {
           messages: [].concat(_toConsumableArray(prevState.messages), [message])
         });
       });
+    }
+  }, {
+    key: "showMainMenu",
+    value: function showMainMenu() {
+      var mainMenu = this.createChatBotMessage("Main Menu", {
+        widget: "BaseOptions"
+      });
+      this.updateChatbotState(mainMenu);
     }
 
     //implement till here
@@ -2617,6 +2642,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 // import SingleOptionWithLink from "../components/singleLinkOnclick/option";
 
 // import ActionProvider from '../../../recheck/chat/src/chatbot/ActionProvider';
+
 
 var config = {
   botName: "Nex",
@@ -2704,6 +2730,20 @@ var config = {
       options: [{
         text: "head to the Forums",
         url: "https://justnexo.com/forums",
+        id: 1
+      }]
+    }
+  }, {
+    widgetName: 'HeadToLMS',
+    widgetFunc: function widgetFunc(props) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_LinkList_LinkList__WEBPACK_IMPORTED_MODULE_3__["default"], _objectSpread({}, props))
+      });
+    },
+    props: {
+      options: [{
+        text: "Open LMS",
+        url: "https://learning.justnexo.com",
         id: 1
       }]
     }
@@ -2813,7 +2853,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
 function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
-var helloAndRestart = ["hello", "hi", "hola"]; // Added the 'any' keyword
+var helloAndRestart = ["hello", "hi", "hola", "hey"]; // Added the 'any' keyword
 var MessageParser = /*#__PURE__*/function () {
   function MessageParser(actionProvider) {
     _classCallCheck(this, MessageParser);
@@ -2921,7 +2961,12 @@ var BaseOptions = function BaseOptions(props) {
     text: "Where did all this start ?",
     handler: props.actionProvider.handleJuanaNexo,
     id: 6
-  }];
+  }, {
+    text: "LMS",
+    handler: props.actionProvider.handleLMS,
+    id: 7
+  } // Handle Link to LMS
+  ];
   var optionsMarkup = options.map(function (option) {
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
       className: "option-button",
