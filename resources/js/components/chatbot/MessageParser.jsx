@@ -1,4 +1,4 @@
-const helloAndRestart = ["hello", "hi", "hola"]; // Added the 'any' keyword
+const helloAndRestart = ["hello", "hi", "hola", "hey"]; // Added the 'any' keyword
 
 class
  

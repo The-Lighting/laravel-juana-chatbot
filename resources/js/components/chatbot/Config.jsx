@@ -93,6 +93,23 @@ const config = {
         }]
       }
     },
+	{
+  widgetName: 'HeadToLMS',
+  widgetFunc: (props) => (
+    <>
+      <LinkList {...props} />
+    </>
+  ),
+  props:{
+    options:[
+      {
+        text: "Open LMS",
+        url: "https://learning.justnexo.com",
+        id: 1,
+      }
+    ]
+  }
+},
     {
       widgetName: 'HeadToStore',
       widgetFunc: (props) => <LinkList {...props} />,
@@ -103,7 +120,8 @@ const config = {
           id: 1,
         }]
       }
-    },{
+    },
+	{
       widgetName: 'HeadToInstructors',
       widgetFunc: (props) => < LinkList {...props} />,
       props:{
@@ -122,7 +140,8 @@ const config = {
         }
       ]
       }
-    },{
+    },
+	{
       widgetName: "headToCertificate",
       widgetFunc: (props) => < LinkList {...props} />,
       props: {
