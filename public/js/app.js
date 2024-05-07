@@ -2352,7 +2352,7 @@ var _require = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/reac
 // Rest of your HelloReact.js code
 
 function HelloReact() {
-  return /*#__PURE__*/React.createElement("h1", null, "Hello React!");
+  return /*#__PURE__*/React.createElement("h1", null, "NEXO Chatbot");
 }
 if (document.getElementById('hello-react')) {
   ReactDOM.render( /*#__PURE__*/React.createElement(HelloReact, null), document.getElementById('hello-react'));
