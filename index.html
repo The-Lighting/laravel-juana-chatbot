@@ -63,6 +63,12 @@
             var chatbotDiv = document.getElementById('chatbot-App');
             chatbotDiv.style.display = (chatbotDiv.style.display === 'block') ? 'none' : 'block';
         }
+
+        // Automatically open the chatbot after 2 seconds if the user doesn't interact with the button
+        setTimeout(function() {
+            var chatbotDiv = document.getElementById('chatbot-App');
+            chatbotDiv.style.display = 'block';
+        }, 10000);
     </script>
 </body> 
 </html>

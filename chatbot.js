@@ -2525,14 +2525,14 @@
             widget: "CertainCourse"
           });
           _this.updateChatbotState(message);
-		  _this.showMainMenu();
+		  //_this.showMainMenu();
         });
         _defineProperty(this, "handleStore", function () {
           var message = _this.createChatBotMessage("if you have any issues with the products page please contact the team.", {
             widget: "HeadToStore"
           });
           _this.updateChatbotState(message);
-		  _this.showMainMenu();
+		  //_this.showMainMenu();
         });
         _defineProperty(this, "handleInstructor", function () {
           var message = _this.createChatBotMessage("We take good care of selecting good Instructors for our affiliated students. Please find more information on the official website", {
@@ -2541,14 +2541,14 @@
     
           //handle session details
           _this.updateChatbotState(message);
-		  _this.showMainMenu();
+		  //_this.showMainMenu();
         });
         _defineProperty(this, "handleForum", function () {
           var message = _this.createChatBotMessage("i think you should head to forums to find what you are looking for", {
             widget: "headToForum"
           });
           _this.updateChatbotState(message);
-		  _this.showMainMenu();
+		  //_this.showMainMenu();
         });
         _defineProperty(this, "handlecontactus", function () {
           var message = [_this.createChatBotMessage("Tel: +91 11 4100 4112       Email: support@justnexo.com         JUANA TECHNOLOGIES PVT. LTD.", {
@@ -2557,7 +2557,7 @@
           })];
           message.forEach(function (element) {
             _this.updateChatbotState(element);
-			_this.showMainMenu();
+			//_this.showMainMenu();
           });
         });
         //implementing other courses
@@ -2566,21 +2566,21 @@
             widget: "gamebasedlearninglink"
           });
           _this.updateChatbotState(message);
-		  _this.showMainMenu();
+		  //_this.showMainMenu();
         });
         _defineProperty(this, "handlexperientiallearning", function () {
           var message = _this.createChatBotMessage("In this kind of learning we emphasize on the learning of things like robotics by actually creating them. for more information-", {
             widget: "experientiallearning"
           });
           _this.updateChatbotState(message);
-		  _this.showMainMenu();
+		 // _this.showMainMenu();
         });
         _defineProperty(this, "handlepersonaldevelopment", function () {
           var message = _this.createChatBotMessage("Learn Personal Development or improve your skills online today. Choose from a wide range of Personal Development courses offered by us", {
             widget: "personalDevelopment"
           });
           _this.updateChatbotState(message);
-		  _this.showMainMenu();
+		 // _this.showMainMenu();
         });
         _defineProperty(this, "handleGPTResponse", function (userInput) {
           try {
@@ -2611,21 +2611,21 @@
             widget: 'headtoJuanaNexo'
           });
           _this.updateChatbotState(message);
-		  _this.showMainMenu();
+		  //_this.showMainMenu();
         });
 		_defineProperty(this, "handleLMS", function () {
           var message = _this.createChatBotMessage("Sure! You can access our Learning Management System (LMS) by clicking the button below:", {
             widget: 'HeadToLMS'
           });
           _this.updateChatbotState(message);
-		  _this.showMainMenu();
+		  //_this.showMainMenu();
         });
         _defineProperty(this, "handleCertificate", function () {
           var message = _this.createChatBotMessage("Here is the link to the webpage to handle Certicate Verification", {
             widget: 'headToCertificate'
           });
           _this.updateChatbotState(message);
-		  _this.showMainMenu();
+		  //_this.showMainMenu();
         });
         this.createChatBotMessage = createChatBotMessage;
         this.setState = setStateFunc;
