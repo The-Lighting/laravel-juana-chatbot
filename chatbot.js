@@ -2857,7 +2857,7 @@
           }, {
             text: 'Request a callback',
             ///// just add this if you want to add a request a callback forms page in there along with the other 
-            url: '../contact',
+            url: 'https://the-lighting.github.io/laravel-juana-chatbot/contact',
             /// currently this only work with the linklist component only
             id: 2
           }]
