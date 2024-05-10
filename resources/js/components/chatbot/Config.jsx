@@ -160,10 +160,6 @@ const config = {
           text:"Engage with real conversations in the Forums",
           url: "https://justnexo.com/forums",
           id: 1,
-        },{
-          text: 'Request a callback',///// just add this if you want to add a request a callback forms page in there along with the other 
-          url:'../contact',/// currently this only work with the linklist component only
-          id: 2,
         }]
       }
     },
@@ -187,10 +183,10 @@ const config = {
   //here we have defined the various steps in this extra
   customStyles: {
     botMessageBox: {
-      backgroundColor: "#cf202e",
+      backgroundColor: "#D0021B",
     },
     chatButton: {
-      backgroundColor: "#cf202e",
+      backgroundColor: "#D0021B",
     },
   },
 }

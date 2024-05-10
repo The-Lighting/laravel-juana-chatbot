@@ -1,6 +1,7 @@
 // import GameBasedLearning from '../components/kindsofcoursesoptions/GameBasedLearning'
 // import ExperientialLearning from '../components/kindsofcoursesoptions/ExperentialLearning';
-
+import IframeWidget from '../components/iframe/IframeWidget';
+import ModalWidget from '../components/iframe/ModalWidget';
 class ActionProvider {
   constructor(
     createChatBotMessage,
@@ -48,7 +49,7 @@ class ActionProvider {
     );
 
     this.updateChatbotState(message);
-    this.showMainMenu();
+    //this.showMainMenu();
   };
   handleCourse = () => {
     const message = this.createChatBotMessage(
@@ -59,7 +60,7 @@ class ActionProvider {
     );
 
     this.updateChatbotState(message);
-    this.showMainMenu();
+    //this.showMainMenu();
   };
   handleStore = () => {
     const message = this.createChatBotMessage(
@@ -69,7 +70,7 @@ class ActionProvider {
       },
     );
     this.updateChatbotState(message);
-    this.showMainMenu();
+    //this.showMainMenu();
   };
   handleInstructor = () => {
     const message = this.createChatBotMessage(
@@ -82,7 +83,7 @@ class ActionProvider {
     //handle session details
     this.updateChatbotState(message);
 
-    this.showMainMenu();
+    //this.showMainMenu();
   };
   handleForum = () => {
     const message = this.createChatBotMessage(
@@ -93,25 +94,36 @@ class ActionProvider {
     );
 
     this.updateChatbotState(message);
-
-    this.showMainMenu();
   };
+  
+  handlerequestcb = () => {
+    // Create a message for "Request a Callback form"
+    const callbackMessage = this.createChatBotMessage("Form for requesting a callback has been opened.");
+
+    // Create a modal message containing the iframe and the callback message
+    const iframeModalMessage = this.createChatBotMessage(
+        <ModalWidget onClose={() => this.closeModal()}>
+                <IframeWidget src="https://forms.office.com/Pages/ResponsePage.aspx?id=sN105GbtaUSGllpAibkG__CiVxyYxO1IrHff89pCqexUQ0tIMTFaTTA4MFI3TjcyN1NQQkVBSkEwRCQlQCN0PWcu&embed=true" width="800px" height="600px" style={{ border: 'none', maxWidth: '100%', maxHeight: '100vh' }} />
+        </ModalWidget>
+    );
+	// Update chatbot state to display the callback message
+	this.updateChatbotState(callbackMessage);
+    // Update chatbot state to display the modal message
+    this.updateChatbotState(iframeModalMessage);
+};
+
   handlecontactus = () => {
-    const message = [
-      this.createChatBotMessage(
-        "Tel: +91 11 4100 4112       Email: support@justnexo.com         JUANA TECHNOLOGIES PVT. LTD.",
-        {
-          //add config widget
+    const message = this.createChatBotMessage(
+      "Tel: +91 11 4100 4112       Email: support@justnexo.com         JUANA TECHNOLOGIES PVT. LTD.",
+      {
           widget: "contactus",
-        },
-      ),
-    ];
-    message.forEach((element) => {
-      this.updateChatbotState(element);
-    });
+      }
+    );
 
-    this.showMainMenu();
-  };
+    this.updateChatbotState(message);
+
+};
+
   //implementing other courses
   handlegamebasedlearning = () => {
     const message = this.createChatBotMessage(
@@ -122,7 +134,7 @@ class ActionProvider {
     );
     this.updateChatbotState(message);
 
-    this.showMainMenu();
+    //this.showMainMenu();
   };
   handlexperientiallearning = () => {
     const message = this.createChatBotMessage(
@@ -133,7 +145,7 @@ class ActionProvider {
     );
     this.updateChatbotState(message);
 
-    this.showMainMenu();
+    //this.showMainMenu();
   };
   handlepersonaldevelopment = () => {
     const message = this.createChatBotMessage(
@@ -143,7 +155,7 @@ class ActionProvider {
       },
     );
     this.updateChatbotState(message);
-    this.showMainMenu();
+   // this.showMainMenu();
   };
 
   handleGPTResponse = (userInput) => {
@@ -181,7 +193,7 @@ class ActionProvider {
       },
     );
     this.updateChatbotState(message);
-    this.showMainMenu();
+   //this.showMainMenu();
   };
   handleCertificate = () => {
     const message = this.createChatBotMessage(
@@ -192,7 +204,7 @@ class ActionProvider {
     );
     this.updateChatbotState(message);
 
-    this.showMainMenu();
+    //this.showMainMenu();
   };
 
   showMainMenu() {
@@ -200,7 +212,7 @@ class ActionProvider {
       widget: "BaseOptions",
     });
     this.updateChatbotState(mainMenu);
-  }
+  } // not being used
 
   //implement till here
 }
