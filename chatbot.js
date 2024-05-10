@@ -2479,6 +2479,8 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 
 
 
+
+
 var ActionProvider = /*#__PURE__*/function () {
   function ActionProvider(createChatBotMessage, setStateFunc, createClientMessage, stateRef, createCustomMessage) {
     var _this = this;
@@ -2521,27 +2523,22 @@ var ActionProvider = /*#__PURE__*/function () {
       _this.updateChatbotState(message);
     });
     _defineProperty(this, "handlerequestcb", function () {
-      // Create a message for "Request a Callback form"
-      var callbackMessage = _this.createChatBotMessage("Form for requesting a callback has been opened.");
-
       // Create a modal message containing the iframe and the callback message
-      var iframeModalMessage = _this.createChatBotMessage( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_iframe_ModalWidget__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        onClose: function onClose() {
-          return _this.closeModal();
-        },
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_iframe_IframeWidget__WEBPACK_IMPORTED_MODULE_0__["default"], {
-          src: "https://forms.office.com/Pages/ResponsePage.aspx?id=sN105GbtaUSGllpAibkG__CiVxyYxO1IrHff89pCqexUQ0tIMTFaTTA4MFI3TjcyN1NQQkVBSkEwRCQlQCN0PWcu&embed=true",
-          width: "800px",
-          height: "600px",
-          style: {
-            border: 'none',
-            maxWidth: '100%',
-            maxHeight: '100vh'
-          }
-        })
+      var iframeModalMessage = _this.createChatBotMessage( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+        children: ["Form for requesting a callback has been opened.", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_iframe_ModalWidget__WEBPACK_IMPORTED_MODULE_1__["default"], {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_iframe_IframeWidget__WEBPACK_IMPORTED_MODULE_0__["default"], {
+            src: "https://forms.office.com/Pages/ResponsePage.aspx?id=sN105GbtaUSGllpAibkG__CiVxyYxO1IrHff89pCqexUQ0tIMTFaTTA4MFI3TjcyN1NQQkVBSkEwRCQlQCN0PWcu&embed=true",
+            width: "800px",
+            height: "600px",
+            style: {
+              border: 'none',
+              maxWidth: '100%',
+              maxHeight: '100vh'
+            }
+          })
+        })]
       }));
-      // Update chatbot state to display the callback message
-      _this.updateChatbotState(callbackMessage);
+
       // Update chatbot state to display the modal message
       _this.updateChatbotState(iframeModalMessage);
     });
@@ -9266,7 +9263,7 @@ function findTransitionLane(wipLanes, pendingLanes) {
 
 function findRetryLane(wipLanes) {
   // This is a fork of `findUpdateLane` designed specifically for Suspense
-  // "retries" â€” a special update that attempts to flip a Suspense boundary
+  // "retries" — a special update that attempts to flip a Suspense boundary
   // from its placeholder state to its primary/resolved state.
   var lane = pickArbitraryLane(RetryLanes & ~wipLanes);
 
@@ -17209,7 +17206,7 @@ function ChildReconciler(shouldTrackSideEffects) {
             break;
           }
 
-          error('Encountered two children with the same key, `%s`. ' + 'Keys should be unique so that components maintain their identity ' + 'across updates. Non-unique keys may cause children to be ' + 'duplicated and/or omitted â€” the behavior is unsupported and ' + 'could change in a future version.', key);
+          error('Encountered two children with the same key, `%s`. ' + 'Keys should be unique so that components maintain their identity ' + 'across updates. Non-unique keys may cause children to be ' + 'duplicated and/or omitted — the behavior is unsupported and ' + 'could change in a future version.', key);
 
           break;
       }
@@ -25399,7 +25396,7 @@ function requestUpdateLane(fiber) {
 
 function requestRetryLane(fiber) {
   // This is a fork of `requestUpdateLane` designed specifically for Suspense
-  // "retries" â€” a special update that attempts to flip a Suspense boundary
+  // "retries" — a special update that attempts to flip a Suspense boundary
   // from its placeholder state to its primary/resolved state.
   // Special cases
   var mode = fiber.mode;
@@ -27793,7 +27790,7 @@ function finishPendingInteractions(root, committedLanes) {
   } finally {
     // Clear completed interactions from the pending Map.
     // Unless the render was suspended or cascading work was scheduled,
-    // In which caseâ€“ leave pending interactions until the subsequent render.
+    // In which case– leave pending interactions until the subsequent render.
     var pendingInteractionMap = root.pendingInteractionMap;
     pendingInteractionMap.forEach(function (scheduledInteractions, lane) {
       // Only decrement the pending interaction count if we're done.
@@ -28528,7 +28525,7 @@ function createHostRootFiber(tag) {
 
   if ( isDevToolsPresent) {
     // Always collect profile timings when DevTools are present.
-    // This enables DevTools to start capturing timing at any pointâ€“
+    // This enables DevTools to start capturing timing at any point–
     // Without some nodes in the tree having empty base times.
     mode |= ProfileMode;
   }
@@ -33529,7 +33526,7 @@ var DEFAULT_THREAD_ID = 0; // Counters used to generate unique IDs.
 
 var interactionIDCounter = 0;
 var threadIDCounter = 0; // Set of currently traced interactions.
-// Interactions "stack"â€“
+// Interactions "stack"–
 // Meaning that newly traced interactions are appended to the previously active set.
 // When an interaction goes out of scope, the previous set (if any) is restored.
 
@@ -33661,7 +33658,7 @@ function unstable_wrap(callback) {
     } finally {
       if (!hasRun) {
         // We only expect a wrapped function to be executed once,
-        // But in the event that it's executed more than onceâ€“
+        // But in the event that it's executed more than once–
         // Only decrement the outstanding interaction counts once.
         hasRun = true; // Update pending async counts for all wrapped interactions.
         // If this was the last scheduled async work for any of them,
