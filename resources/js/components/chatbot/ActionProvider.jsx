@@ -97,17 +97,16 @@ class ActionProvider {
   };
   
   handlerequestcb = () => {
-    // Create a message for "Request a Callback form"
-    const callbackMessage = this.createChatBotMessage("Form for requesting a callback has been opened.");
-
     // Create a modal message containing the iframe and the callback message
     const iframeModalMessage = this.createChatBotMessage(
-        <ModalWidget onClose={() => this.closeModal()}>
+        <>
+            Form for requesting a callback has been opened.
+            <ModalWidget>
                 <IframeWidget src="https://forms.office.com/Pages/ResponsePage.aspx?id=sN105GbtaUSGllpAibkG__CiVxyYxO1IrHff89pCqexUQ0tIMTFaTTA4MFI3TjcyN1NQQkVBSkEwRCQlQCN0PWcu&embed=true" width="800px" height="600px" style={{ border: 'none', maxWidth: '100%', maxHeight: '100vh' }} />
-        </ModalWidget>
+            </ModalWidget>
+        </>
     );
-	// Update chatbot state to display the callback message
-	this.updateChatbotState(callbackMessage);
+
     // Update chatbot state to display the modal message
     this.updateChatbotState(iframeModalMessage);
 };
