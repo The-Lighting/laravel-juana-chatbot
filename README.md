@@ -6,3 +6,8 @@ This branch is dedicated to accessing forms for both Microsoft Forms and Zoho Fo
 - **Zoho Form:** [Access here](https://the-lighting.github.io/laravel-juana-chatbot/zoho/)
 
 Use the 'Request a Callback' button within chatbot to access the form.
+
+# Direct Links
+
+- **Microsoft Form:** [Access here](https://the-lighting.github.io/laravel-juana-chatbot/contact/index.html)
+- **Zoho Form:** [Access here](https://the-lighting.github.io/laravel-juana-chatbot/contact/zoho_form.html)
