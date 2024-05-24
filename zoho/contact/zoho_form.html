@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Request a Callback</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
         html, body {
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #f4f4f9;
             color: #333;
         }
@@ -16,83 +18,108 @@
         #crmWebToEntityForm {
             background-color: #fff;
             color: #333;
-            max-width: 600px;
+            max-width: 500px;
             margin: 50px auto;
-            padding: 25px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
         }
 
         .zcwf_title {
-            font-size: 24px;
-            font-weight: bold;
+            font-size: 28px;
+            font-weight: 700;
             color: #333;
             text-align: center;
             margin-bottom: 20px;
         }
 
         .zcwf_row {
-            margin: 15px 0;
+            margin: 20px 0;
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
         }
 
         .zcwf_col_lab {
             width: 100%;
-            font-size: 14px;
-            margin-bottom: 5px;
+            font-size: 16px;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #666;
         }
 
         .zcwf_col_fld {
             width: 100%;
             margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
         }
 
         .zcwf_col_fld input[type=text],
         .zcwf_col_fld input[type=email],
         .zcwf_col_fld textarea {
-            width: 100%;
-            padding: 10px;
+            width: calc(100% - 24px);
+            padding: 12px;
             border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 14px;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #333;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .zcwf_col_fld textarea {
             resize: vertical;
-            height: 100px;
+            height: 120px;
         }
 
-        .zcwf_button {
+        .zcwf_button, .zcwf_reset_button {
             background-color: #007bff;
             color: #fff;
             border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
+            padding: 8px 16px;
+            border-radius: 6px;
             cursor: pointer;
             font-size: 14px;
-            transition: background-color 0.3s;
-            margin-right: 10px;
+            transition: background-color 0.3s, transform 0.3s;
+            margin: 5px 0;
+            width: 45%;
         }
 
         .zcwf_button:hover {
             background-color: #0056b3;
+            transform: translateY(-2px);
         }
 
-        .zcwf_button:disabled {
-            background-color: #ccc;
-            cursor: not-allowed;
+        .zcwf_reset_button {
+            background-color: #dc3545;
+        }
+
+        .zcwf_reset_button:hover {
+            background-color: #c82333;
+            transform: translateY(-2px);
         }
 
         .zcwf_privacy_txt {
-            font-size: 12px;
+            font-size: 14px;
             color: #666;
-            margin-top: 10px;
+            margin-top: 15px;
+            text-align: center;
         }
 
         @media (max-width: 600px) {
             #crmWebToEntityForm {
                 padding: 20px;
+            }
+
+            .zcwf_col_fld input[type=text],
+            .zcwf_col_fld input[type=email],
+            .zcwf_col_fld textarea {
+                width: calc(100% - 24px);
+            }
+
+            .zcwf_button, .zcwf_reset_button {
+                width: calc(45% - 10px);
+                margin: 10px 0;
             }
         }
     </style>
@@ -129,9 +156,9 @@
 
         <div class='zcwf_row'>
             <div class='zcwf_col_lab'></div>
-            <div class='zcwf_col_fld'>
+            <div class='zcwf_col_fld' style='display: flex; justify-content: left;'>
                 <input type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Submit' title='Submit'>
-                <input type='reset' class='zcwf_button' name='reset' value='Reset' title='Reset'>
+                <input type='reset' class='zcwf_reset_button' name='reset' value='Reset' title='Reset'>
             </div>
         </div>
 
